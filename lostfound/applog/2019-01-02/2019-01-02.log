@@ -1,0 +1,704 @@
+2019-01-02 16:31:50 -Starting TestDemo on XTZ-01806071735 with PID 27160 (started by Administrator in C:\Users\Administrator\Desktop\MyGitHub\lostfound\lostfound)
+2019-01-02 16:31:50 -Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2019-01-02 16:31:50 -The following profiles are active: dev
+2019-01-02 16:31:50 -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@58c34bb3: startup date [Wed Jan 02 16:31:50 CST 2019]; root of context hierarchy
+2019-01-02 16:31:54 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-02 16:31:57 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f521c7d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:31:57 -Bean 'shiroConfig' of type [com.lostfound.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$41a8d045] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:31:58 -Bean 'userRealm' of type [com.lostfound.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:31:58 -No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Administrator/.m2/repository/net/sf/ehcache/ehcache/2.10.5/ehcache-2.10.5.jar!/ehcache-failsafe.xml
+2019-01-02 16:31:58 -Bean 'cacheManager2' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:31:58 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:31:58 -Cache with name 'com.lostfound.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2019-01-02 16:31:58 -Added EhCache named [com.lostfound.system.shiro.UserRealm.authorizationCache]
+2019-01-02 16:31:58 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:31:59 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:31:59 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:31:59 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:32:01 -{dataSource-1} inited
+2019-01-02 16:32:02 -ApplicationContext registed-->org.springframework.web.context.support.GenericWebApplicationContext@58c34bb3: startup date [Wed Jan 02 16:31:50 CST 2019]; root of context hierarchy
+2019-01-02 16:32:03 -Using default implementation for ThreadExecutor
+2019-01-02 16:32:03 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-01-02 16:32:03 -Quartz Scheduler v.2.2.1 created.
+2019-01-02 16:32:03 -RAMJobStore initialized.
+2019-01-02 16:32:03 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-01-02 16:32:03 -Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2019-01-02 16:32:03 -Quartz scheduler version: 2.2.1
+2019-01-02 16:32:03 -JobFactory set to: com.lostfound.common.quartz.factory.JobFactory@5d767218
+2019-01-02 16:32:04 -Initializing ExecutorService  'clientInboundChannelExecutor'
+2019-01-02 16:32:05 -Initializing ExecutorService  'clientOutboundChannelExecutor'
+2019-01-02 16:32:07 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.add()
+2019-01-02 16:32:07 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.remove(java.lang.Long)
+2019-01-02 16:32:07 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.remove(java.lang.Long[])
+2019-01-02 16:32:07 -Mapped "{[/common/dict/update]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.update(com.lostfound.common.domain.DictDO)
+2019-01-02 16:32:07 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:07 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.save(com.lostfound.common.domain.DictDO)
+2019-01-02 16:32:07 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.lostfound.common.domain.DictDO> com.lostfound.common.controller.DictController.listType()
+2019-01-02 16:32:07 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:07 -Mapped "{[/common/dict/list/{type}],methods=[GET]}" onto public java.util.List<com.lostfound.common.domain.DictDO> com.lostfound.common.controller.DictController.listByType(java.lang.String)
+2019-01-02 16:32:07 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.dict()
+2019-01-02 16:32:07 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.add()
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.remove(java.lang.Long[])
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/update]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.update(com.lostfound.common.domain.FileDO)
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.FileController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.save(com.lostfound.common.domain.FileDO)
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/info/{id}]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.info(java.lang.Long)
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.sysFile(org.springframework.ui.Model)
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/edit],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:07 -Mapped "{[/common/sysFile/upload],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2019-01-02 16:32:07 -Mapped "{[/common/generator/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.GeneratorController.update(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:07 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.lostfound.common.controller.GeneratorController.list()
+2019-01-02 16:32:07 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.lostfound.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-01-02 16:32:07 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.GeneratorController.generator()
+2019-01-02 16:32:07 -Mapped "{[/common/generator/edit],methods=[GET]}" onto public java.lang.String com.lostfound.common.controller.GeneratorController.edit(org.springframework.ui.Model)
+2019-01-02 16:32:07 -Mapped "{[/common/generator/batchCode]}" onto public void com.lostfound.common.controller.GeneratorController.batchCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-01-02 16:32:08 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.add()
+2019-01-02 16:32:08 -Mapped "{[/common/job/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.remove(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.remove(java.lang.Long[])
+2019-01-02 16:32:08 -Mapped "{[/common/job/update],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.update(com.lostfound.common.domain.TaskDO)
+2019-01-02 16:32:08 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:08 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.save(com.lostfound.common.domain.TaskDO)
+2019-01-02 16:32:08 -Mapped "{[/common/job/info/{id}]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.info(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.taskScheduleJob()
+2019-01-02 16:32:08 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2019-01-02 16:32:08 -Mapped "{[/common/log/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.LogController.remove(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.LogController.log()
+2019-01-02 16:32:08 -Mapped "{[/common/log/list],methods=[GET]}" onto com.lostfound.common.domain.PageDO<com.lostfound.common.domain.LogDO> com.lostfound.common.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:08 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.LogController.batchRemove(java.lang.Long[])
+2019-01-02 16:32:08 -Mapped "{[/error]}" onto public com.lostfound.common.utils.R com.lostfound.common.exception.MainsiteErrorController.handleError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-02 16:32:08 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.lostfound.common.exception.MainsiteErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/add],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.add()
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.remove(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.remove(java.lang.Long[])
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/update]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.update(com.lostfound.oa.domain.NotifyDO)
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/read/{id}],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.read(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.save(com.lostfound.oa.domain.NotifyDO)
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/message],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.message()
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/selfList],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.selfList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:08 -Mapped "{[/oa/notify/selfNotify],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.selefNotify()
+2019-01-02 16:32:08 -Mapped "{[/oa/notify],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.oaNotify()
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/add/{pId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.add(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.remove(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.remove(java.lang.Long[])
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/update]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.update(com.lostfound.system.domain.DeptDO)
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/list],methods=[GET]}" onto public java.util.List<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.DeptController.list()
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.save(com.lostfound.system.domain.DeptDO)
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/tree],methods=[GET]}" onto public com.lostfound.common.domain.Tree<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.DeptController.tree()
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/edit/{deptId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.dept()
+2019-01-02 16:32:08 -Mapped "{[/system/sysDept/treeView],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.treeView()
+2019-01-02 16:32:08 -Mapped "{[/index],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.index(org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/main],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.main()
+2019-01-02 16:32:08 -Mapped "{[/logout],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.logout()
+2019-01-02 16:32:08 -Mapped "{[/login || / || ],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.login()
+2019-01-02 16:32:08 -Mapped "{[/login],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.LoginController.ajaxLogin(java.lang.String,java.lang.String)
+2019-01-02 16:32:08 -Mapped "{[/sys/menu/add/{pId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.add(org.springframework.ui.Model,java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/sys/menu/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.remove(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/sys/menu/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.update(com.lostfound.system.domain.MenuDO)
+2019-01-02 16:32:08 -Mapped "{[/sys/menu/list]}" onto java.util.List<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:08 -Mapped "{[/sys/menu/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.save(com.lostfound.system.domain.MenuDO)
+2019-01-02 16:32:08 -Mapped "{[/sys/menu/tree/{roleId}],methods=[GET]}" onto com.lostfound.common.domain.Tree<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.tree(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/sys/menu/tree],methods=[GET]}" onto com.lostfound.common.domain.Tree<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.tree()
+2019-01-02 16:32:08 -Mapped "{[/sys/menu/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/sys/menu],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.menu(org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/sys/role/add],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.add()
+2019-01-02 16:32:08 -Mapped "{[/sys/role/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.update(com.lostfound.system.domain.RoleDO)
+2019-01-02 16:32:08 -Mapped "{[/sys/role/list],methods=[GET]}" onto java.util.List<com.lostfound.system.domain.RoleDO> com.lostfound.system.controller.RoleController.list()
+2019-01-02 16:32:08 -Mapped "{[/sys/role/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.save(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/sys/role/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.save(com.lostfound.system.domain.RoleDO)
+2019-01-02 16:32:08 -Mapped "{[/sys/role/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.batchRemove(java.lang.Long[])
+2019-01-02 16:32:08 -Mapped "{[/sys/role],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.role()
+2019-01-02 16:32:08 -Mapped "{[/sys/role/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.lostfound.system.domain.UserOnline> com.lostfound.system.controller.SessionController.list()
+2019-01-02 16:32:08 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-01-02 16:32:08 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.lostfound.system.controller.SessionController.sessionList()
+2019-01-02 16:32:08 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.lostfound.system.controller.SessionController.online()
+2019-01-02 16:32:08 -Mapped "{[/sys/user/exit],methods=[POST]}" onto boolean com.lostfound.system.controller.UserController.exit(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/add],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.add(org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.remove(java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.update(com.lostfound.system.domain.UserDO)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/list],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.system.controller.UserController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.save(com.lostfound.system.domain.UserDO)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.batchRemove(java.lang.Long[])
+2019-01-02 16:32:08 -Mapped "{[/sys/user/tree],methods=[GET]}" onto public com.lostfound.common.domain.Tree<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.UserController.tree()
+2019-01-02 16:32:08 -Mapped "{[/sys/user],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.user(org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/treeView],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.treeView()
+2019-01-02 16:32:08 -Mapped "{[/sys/user/updatePeronal],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.updatePeronal(com.lostfound.system.domain.UserDO)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/adminResetPwd],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.adminResetPwd(com.lostfound.system.vo.UserVO)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/uploadImg],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/resetPwd],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.resetPwd(com.lostfound.system.vo.UserVO)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/resetPwd/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.resetPwd(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/sys/user/personal],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.personal(org.springframework.ui.Model)
+2019-01-02 16:32:08 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-01-02 16:32:08 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-02 16:32:08 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-02 16:32:08 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-02 16:32:08 -Initializing ExecutorService  'messageBrokerTaskScheduler'
+2019-01-02 16:32:09 -Failed to create a default WebSocketTransportHandler
+java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.initRequestUpgradeStrategy(AbstractHandshakeHandler.java:142)
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.<init>(AbstractHandshakeHandler.java:108)
+	at org.springframework.web.socket.server.support.DefaultHandshakeHandler.<init>(DefaultHandshakeHandler.java:35)
+	at org.springframework.web.socket.sockjs.transport.handler.DefaultSockJsService.getDefaultTransportHandlers(DefaultSockJsService.java:93)
+	at org.springframework.web.socket.sockjs.transport.handler.DefaultSockJsService.<init>(DefaultSockJsService.java:78)
+	at org.springframework.web.socket.config.annotation.SockJsServiceRegistration.createSockJsService(SockJsServiceRegistration.java:317)
+	at org.springframework.web.socket.config.annotation.SockJsServiceRegistration.getSockJsService(SockJsServiceRegistration.java:270)
+	at org.springframework.web.socket.config.annotation.WebMvcStompWebSocketEndpointRegistration.getMappings(WebMvcStompWebSocketEndpointRegistration.java:128)
+	at org.springframework.web.socket.config.annotation.WebMvcStompEndpointRegistry.getHandlerMapping(WebMvcStompEndpointRegistry.java:152)
+	at org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurationSupport.stompWebSocketHandlerMapping(WebSocketMessageBrokerConfigurationSupport.java:78)
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$e60c88aa.CGLIB$stompWebSocketHandlerMapping$13(<generated>)
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$e60c88aa$$FastClassBySpringCGLIB$$200487cf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$e60c88aa.stompWebSocketHandlerMapping(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1256)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+2019-01-02 16:32:09 -Mapped URL path [/endpointChat/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2019-01-02 16:32:09 -Initializing ExecutorService  'brokerChannelExecutor'
+2019-01-02 16:32:11 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-02 16:32:12 -Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@58c34bb3: startup date [Wed Jan 02 16:31:50 CST 2019]; root of context hierarchy
+2019-01-02 16:32:13 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-02 16:32:13 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-02 16:32:13 -Mapped URL path [/files/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-02 16:32:13 -Detected @ExceptionHandler methods in BDExceptionHandler
+2019-01-02 16:32:13 -[THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-01-02 16:32:18 -Starting beans in phase 2147483647
+2019-01-02 16:32:18 -Context refreshed
+2019-01-02 16:32:18 -Found 1 custom documentation plugin(s)
+2019-01-02 16:32:18 -Scanning for api listing references
+2019-01-02 16:32:19 -Generating unique operation named: removeUsingPOST_1
+2019-01-02 16:32:19 -Generating unique operation named: addUsingGET_1
+2019-01-02 16:32:19 -Generating unique operation named: editUsingGET_1
+2019-01-02 16:32:19 -Generating unique operation named: listUsingGET_1
+2019-01-02 16:32:19 -Generating unique operation named: removeUsingPOST_2
+2019-01-02 16:32:19 -Generating unique operation named: removeUsingPOST_3
+2019-01-02 16:32:19 -Generating unique operation named: saveUsingPOST_1
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingGET_1
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingHEAD_1
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingPOST_1
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingPUT_1
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingPATCH_1
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingDELETE_1
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingOPTIONS_1
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingTRACE_1
+2019-01-02 16:32:19 -Generating unique operation named: addUsingGET_2
+2019-01-02 16:32:19 -Generating unique operation named: editUsingGET_2
+2019-01-02 16:32:19 -Generating unique operation named: listUsingGET_2
+2019-01-02 16:32:19 -Generating unique operation named: removeUsingPOST_4
+2019-01-02 16:32:19 -Generating unique operation named: removeUsingPOST_5
+2019-01-02 16:32:19 -Generating unique operation named: saveUsingPOST_2
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingGET_2
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingHEAD_2
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingPOST_2
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingPUT_2
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingPATCH_2
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingDELETE_2
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingOPTIONS_2
+2019-01-02 16:32:19 -Generating unique operation named: updateUsingTRACE_2
+2019-01-02 16:32:20 -Generating unique operation named: editUsingGET_3
+2019-01-02 16:32:20 -Generating unique operation named: listUsingGET_3
+2019-01-02 16:32:20 -Generating unique operation named: updateUsingPOST_3
+2019-01-02 16:32:20 -Generating unique operation named: addUsingGET_3
+2019-01-02 16:32:20 -Generating unique operation named: editUsingGET_4
+2019-01-02 16:32:20 -Generating unique operation named: infoUsingGET_1
+2019-01-02 16:32:20 -Generating unique operation named: infoUsingHEAD_1
+2019-01-02 16:32:20 -Generating unique operation named: infoUsingPOST_1
+2019-01-02 16:32:20 -Generating unique operation named: infoUsingPUT_1
+2019-01-02 16:32:20 -Generating unique operation named: infoUsingPATCH_1
+2019-01-02 16:32:20 -Generating unique operation named: infoUsingDELETE_1
+2019-01-02 16:32:20 -Generating unique operation named: infoUsingOPTIONS_1
+2019-01-02 16:32:20 -Generating unique operation named: infoUsingTRACE_1
+2019-01-02 16:32:20 -Generating unique operation named: listUsingGET_4
+2019-01-02 16:32:20 -Generating unique operation named: removeUsingPOST_6
+2019-01-02 16:32:20 -Generating unique operation named: removeUsingPOST_7
+2019-01-02 16:32:20 -Generating unique operation named: saveUsingPOST_3
+2019-01-02 16:32:20 -Generating unique operation named: updateUsingPOST_4
+2019-01-02 16:32:20 -Generating unique operation named: listUsingGET_5
+2019-01-02 16:32:20 -Generating unique operation named: removeUsingPOST_8
+2019-01-02 16:32:20 -Generating unique operation named: loginUsingGET_1
+2019-01-02 16:32:20 -Generating unique operation named: loginUsingGET_2
+2019-01-02 16:32:20 -Generating unique operation named: addUsingGET_4
+2019-01-02 16:32:20 -Generating unique operation named: editUsingGET_5
+2019-01-02 16:32:20 -Generating unique operation named: listUsingGET_6
+2019-01-02 16:32:20 -Generating unique operation named: removeUsingPOST_9
+2019-01-02 16:32:20 -Generating unique operation named: saveUsingPOST_4
+2019-01-02 16:32:20 -Generating unique operation named: treeUsingGET_1
+2019-01-02 16:32:20 -Generating unique operation named: treeUsingGET_2
+2019-01-02 16:32:20 -Generating unique operation named: updateUsingPOST_5
+2019-01-02 16:32:21 -Generating unique operation named: addUsingGET_5
+2019-01-02 16:32:21 -Generating unique operation named: editUsingGET_6
+2019-01-02 16:32:21 -Generating unique operation named: listUsingGET_7
+2019-01-02 16:32:21 -Generating unique operation named: removeUsingPOST_10
+2019-01-02 16:32:21 -Generating unique operation named: removeUsingPOST_11
+2019-01-02 16:32:21 -Generating unique operation named: saveUsingPOST_5
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingGET_3
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingHEAD_3
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingPOST_6
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingPUT_3
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingPATCH_3
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingDELETE_3
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingOPTIONS_3
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingTRACE_3
+2019-01-02 16:32:21 -Generating unique operation named: addUsingGET_6
+2019-01-02 16:32:21 -Generating unique operation named: batchRemoveUsingPOST_1
+2019-01-02 16:32:21 -Generating unique operation named: editUsingGET_7
+2019-01-02 16:32:21 -Generating unique operation named: listUsingGET_8
+2019-01-02 16:32:21 -Generating unique operation named: saveUsingPOST_6
+2019-01-02 16:32:21 -Generating unique operation named: saveUsingPOST_7
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingPOST_7
+2019-01-02 16:32:21 -Generating unique operation named: listUsingGET_9
+2019-01-02 16:32:21 -Generating unique operation named: listUsingHEAD_1
+2019-01-02 16:32:21 -Generating unique operation named: listUsingPOST_1
+2019-01-02 16:32:21 -Generating unique operation named: listUsingPUT_1
+2019-01-02 16:32:21 -Generating unique operation named: listUsingPATCH_1
+2019-01-02 16:32:21 -Generating unique operation named: listUsingDELETE_1
+2019-01-02 16:32:21 -Generating unique operation named: listUsingOPTIONS_1
+2019-01-02 16:32:21 -Generating unique operation named: listUsingTRACE_1
+2019-01-02 16:32:21 -Generating unique operation named: addUsingGET_7
+2019-01-02 16:32:21 -Generating unique operation named: batchRemoveUsingPOST_2
+2019-01-02 16:32:21 -Generating unique operation named: editUsingGET_8
+2019-01-02 16:32:21 -Generating unique operation named: listUsingGET_10
+2019-01-02 16:32:21 -Generating unique operation named: removeUsingPOST_12
+2019-01-02 16:32:21 -Generating unique operation named: saveUsingPOST_8
+2019-01-02 16:32:21 -Generating unique operation named: treeUsingGET_3
+2019-01-02 16:32:21 -Generating unique operation named: treeViewUsingGET_1
+2019-01-02 16:32:21 -Generating unique operation named: updateUsingPOST_8
+2019-01-02 16:32:21 -Starting Quartz Scheduler now
+2019-01-02 16:32:21 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2019-01-02 16:32:21 -Starting...
+2019-01-02 16:32:21 -BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-01-02 16:32:21 -Started.
+2019-01-02 16:32:21 -Started TestDemo in 33.256 seconds (JVM running for 35.636)
+2019-01-02 16:32:22 -==>  Preparing: select `id`,`cron_expression`,`method_name`,`is_concurrent`,`description`,`update_by`,`bean_class`,`create_date`,`job_status`,`job_group`,`update_date`,`create_by`,`spring_bean`,`job_name` from sys_task order by id desc 
+2019-01-02 16:32:22 -==> Parameters: 
+2019-01-02 16:32:22 -<==      Total: 0
+2019-01-02 16:32:23 -Starting without optional epoll library
+2019-01-02 16:32:23 -Starting without optional kqueue library
+2019-01-02 16:32:26 -Closing org.springframework.web.context.support.GenericWebApplicationContext@58c34bb3: startup date [Wed Jan 02 16:31:50 CST 2019]; root of context hierarchy
+2019-01-02 16:32:26 -Stopping beans in phase 2147483647
+2019-01-02 16:32:26 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2019-01-02 16:32:26 -Stopping...
+2019-01-02 16:32:26 -BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-01-02 16:32:26 -Stopped.
+2019-01-02 16:32:27 -Shutting down ExecutorService 'brokerChannelExecutor'
+2019-01-02 16:32:27 -Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-01-02 16:32:27 -Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-01-02 16:32:27 -Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-01-02 16:32:27 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2019-01-02 16:32:27 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2019-01-02 16:32:27 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2019-01-02 16:32:27 -Shutting down Quartz Scheduler
+2019-01-02 16:32:27 -{dataSource-1} closed
+2019-01-02 16:33:52 -Starting TestDemo on XTZ-01806071735 with PID 9236 (started by Administrator in C:\Users\Administrator\Desktop\MyGitHub\lostfound\lostfound)
+2019-01-02 16:33:52 -Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2019-01-02 16:33:52 -The following profiles are active: dev
+2019-01-02 16:33:52 -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@58c34bb3: startup date [Wed Jan 02 16:33:52 CST 2019]; root of context hierarchy
+2019-01-02 16:33:55 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-02 16:33:58 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9266cf18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:33:58 -Bean 'shiroConfig' of type [com.lostfound.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$deedd786] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:33:59 -Bean 'userRealm' of type [com.lostfound.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:33:59 -No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Administrator/.m2/repository/net/sf/ehcache/ehcache/2.10.5/ehcache-2.10.5.jar!/ehcache-failsafe.xml
+2019-01-02 16:33:59 -Bean 'cacheManager2' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:33:59 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:33:59 -Cache with name 'com.lostfound.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2019-01-02 16:33:59 -Added EhCache named [com.lostfound.system.shiro.UserRealm.authorizationCache]
+2019-01-02 16:33:59 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:33:59 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:33:59 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:34:00 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-02 16:34:02 -{dataSource-1} inited
+2019-01-02 16:34:03 -ApplicationContext registed-->org.springframework.web.context.support.GenericWebApplicationContext@58c34bb3: startup date [Wed Jan 02 16:33:52 CST 2019]; root of context hierarchy
+2019-01-02 16:34:03 -Using default implementation for ThreadExecutor
+2019-01-02 16:34:03 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-01-02 16:34:03 -Quartz Scheduler v.2.2.1 created.
+2019-01-02 16:34:03 -RAMJobStore initialized.
+2019-01-02 16:34:03 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-01-02 16:34:03 -Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2019-01-02 16:34:03 -Quartz scheduler version: 2.2.1
+2019-01-02 16:34:03 -JobFactory set to: com.lostfound.common.quartz.factory.JobFactory@7757025d
+2019-01-02 16:34:04 -Initializing ExecutorService  'clientInboundChannelExecutor'
+2019-01-02 16:34:04 -Initializing ExecutorService  'clientOutboundChannelExecutor'
+2019-01-02 16:34:06 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.add()
+2019-01-02 16:34:06 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.remove(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.remove(java.lang.Long[])
+2019-01-02 16:34:06 -Mapped "{[/common/dict/update]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.update(com.lostfound.common.domain.DictDO)
+2019-01-02 16:34:06 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.save(com.lostfound.common.domain.DictDO)
+2019-01-02 16:34:06 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.lostfound.common.domain.DictDO> com.lostfound.common.controller.DictController.listType()
+2019-01-02 16:34:06 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/common/dict/list/{type}],methods=[GET]}" onto public java.util.List<com.lostfound.common.domain.DictDO> com.lostfound.common.controller.DictController.listByType(java.lang.String)
+2019-01-02 16:34:06 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2019-01-02 16:34:06 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.dict()
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.add()
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.remove(java.lang.Long[])
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/update]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.update(com.lostfound.common.domain.FileDO)
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.FileController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.save(com.lostfound.common.domain.FileDO)
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/info/{id}]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.info(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/edit],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.sysFile(org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/common/sysFile/upload],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2019-01-02 16:34:06 -Mapped "{[/common/generator/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.GeneratorController.update(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.lostfound.common.controller.GeneratorController.list()
+2019-01-02 16:34:06 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.lostfound.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-01-02 16:34:06 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.GeneratorController.generator()
+2019-01-02 16:34:06 -Mapped "{[/common/generator/edit],methods=[GET]}" onto public java.lang.String com.lostfound.common.controller.GeneratorController.edit(org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/common/generator/batchCode]}" onto public void com.lostfound.common.controller.GeneratorController.batchCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-01-02 16:34:06 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.add()
+2019-01-02 16:34:06 -Mapped "{[/common/job/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.remove(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.remove(java.lang.Long[])
+2019-01-02 16:34:06 -Mapped "{[/common/job/update],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.update(com.lostfound.common.domain.TaskDO)
+2019-01-02 16:34:06 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.save(com.lostfound.common.domain.TaskDO)
+2019-01-02 16:34:06 -Mapped "{[/common/job/info/{id}]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.info(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.taskScheduleJob()
+2019-01-02 16:34:06 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2019-01-02 16:34:06 -Mapped "{[/common/log/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.LogController.remove(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.LogController.log()
+2019-01-02 16:34:06 -Mapped "{[/common/log/list],methods=[GET]}" onto com.lostfound.common.domain.PageDO<com.lostfound.common.domain.LogDO> com.lostfound.common.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.LogController.batchRemove(java.lang.Long[])
+2019-01-02 16:34:06 -Mapped "{[/error]}" onto public com.lostfound.common.utils.R com.lostfound.common.exception.MainsiteErrorController.handleError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-02 16:34:06 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.lostfound.common.exception.MainsiteErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/add],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.add()
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.remove(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.remove(java.lang.Long[])
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/update]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.update(com.lostfound.oa.domain.NotifyDO)
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/read/{id}],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.read(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.save(com.lostfound.oa.domain.NotifyDO)
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/message],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.message()
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/oa/notify],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.oaNotify()
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/selfList],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.selfList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/oa/notify/selfNotify],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.selefNotify()
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/add/{pId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.add(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.remove(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.remove(java.lang.Long[])
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/update]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.update(com.lostfound.system.domain.DeptDO)
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/list],methods=[GET]}" onto public java.util.List<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.DeptController.list()
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.save(com.lostfound.system.domain.DeptDO)
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/tree],methods=[GET]}" onto public com.lostfound.common.domain.Tree<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.DeptController.tree()
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/edit/{deptId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.dept()
+2019-01-02 16:34:06 -Mapped "{[/system/sysDept/treeView],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.treeView()
+2019-01-02 16:34:06 -Mapped "{[/index],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.index(org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/main],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.main()
+2019-01-02 16:34:06 -Mapped "{[/login || / || ],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.login()
+2019-01-02 16:34:06 -Mapped "{[/logout],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.logout()
+2019-01-02 16:34:06 -Mapped "{[/login],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.LoginController.ajaxLogin(java.lang.String,java.lang.String)
+2019-01-02 16:34:06 -Mapped "{[/sys/menu/add/{pId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.add(org.springframework.ui.Model,java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/sys/menu/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.remove(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/sys/menu/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.update(com.lostfound.system.domain.MenuDO)
+2019-01-02 16:34:06 -Mapped "{[/sys/menu/list]}" onto java.util.List<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/sys/menu/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.save(com.lostfound.system.domain.MenuDO)
+2019-01-02 16:34:06 -Mapped "{[/sys/menu/tree/{roleId}],methods=[GET]}" onto com.lostfound.common.domain.Tree<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.tree(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/sys/menu/tree],methods=[GET]}" onto com.lostfound.common.domain.Tree<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.tree()
+2019-01-02 16:34:06 -Mapped "{[/sys/menu/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/sys/menu],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.menu(org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/sys/role/add],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.add()
+2019-01-02 16:34:06 -Mapped "{[/sys/role/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.update(com.lostfound.system.domain.RoleDO)
+2019-01-02 16:34:06 -Mapped "{[/sys/role/list],methods=[GET]}" onto java.util.List<com.lostfound.system.domain.RoleDO> com.lostfound.system.controller.RoleController.list()
+2019-01-02 16:34:06 -Mapped "{[/sys/role/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.save(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/sys/role/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.save(com.lostfound.system.domain.RoleDO)
+2019-01-02 16:34:06 -Mapped "{[/sys/role/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.batchRemove(java.lang.Long[])
+2019-01-02 16:34:06 -Mapped "{[/sys/role],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.role()
+2019-01-02 16:34:06 -Mapped "{[/sys/role/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.lostfound.system.domain.UserOnline> com.lostfound.system.controller.SessionController.list()
+2019-01-02 16:34:06 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-01-02 16:34:06 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.lostfound.system.controller.SessionController.online()
+2019-01-02 16:34:06 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.lostfound.system.controller.SessionController.sessionList()
+2019-01-02 16:34:06 -Mapped "{[/sys/user/exit],methods=[POST]}" onto boolean com.lostfound.system.controller.UserController.exit(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/add],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.add(org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.remove(java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.update(com.lostfound.system.domain.UserDO)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/list],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.system.controller.UserController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.save(com.lostfound.system.domain.UserDO)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.batchRemove(java.lang.Long[])
+2019-01-02 16:34:06 -Mapped "{[/sys/user/tree],methods=[GET]}" onto public com.lostfound.common.domain.Tree<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.UserController.tree()
+2019-01-02 16:34:06 -Mapped "{[/sys/user],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.user(org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/treeView],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.treeView()
+2019-01-02 16:34:06 -Mapped "{[/sys/user/updatePeronal],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.updatePeronal(com.lostfound.system.domain.UserDO)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/resetPwd],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.resetPwd(com.lostfound.system.vo.UserVO)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/resetPwd/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.resetPwd(java.lang.Long,org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/adminResetPwd],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.adminResetPwd(com.lostfound.system.vo.UserVO)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/uploadImg],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-01-02 16:34:06 -Mapped "{[/sys/user/personal],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.personal(org.springframework.ui.Model)
+2019-01-02 16:34:06 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-01-02 16:34:06 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-02 16:34:06 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-02 16:34:06 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-02 16:34:07 -Initializing ExecutorService  'messageBrokerTaskScheduler'
+2019-01-02 16:34:07 -Failed to create a default WebSocketTransportHandler
+java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.initRequestUpgradeStrategy(AbstractHandshakeHandler.java:142)
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.<init>(AbstractHandshakeHandler.java:108)
+	at org.springframework.web.socket.server.support.DefaultHandshakeHandler.<init>(DefaultHandshakeHandler.java:35)
+	at org.springframework.web.socket.sockjs.transport.handler.DefaultSockJsService.getDefaultTransportHandlers(DefaultSockJsService.java:93)
+	at org.springframework.web.socket.sockjs.transport.handler.DefaultSockJsService.<init>(DefaultSockJsService.java:78)
+	at org.springframework.web.socket.config.annotation.SockJsServiceRegistration.createSockJsService(SockJsServiceRegistration.java:317)
+	at org.springframework.web.socket.config.annotation.SockJsServiceRegistration.getSockJsService(SockJsServiceRegistration.java:270)
+	at org.springframework.web.socket.config.annotation.WebMvcStompWebSocketEndpointRegistration.getMappings(WebMvcStompWebSocketEndpointRegistration.java:128)
+	at org.springframework.web.socket.config.annotation.WebMvcStompEndpointRegistry.getHandlerMapping(WebMvcStompEndpointRegistry.java:152)
+	at org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurationSupport.stompWebSocketHandlerMapping(WebSocketMessageBrokerConfigurationSupport.java:78)
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$83518feb.CGLIB$stompWebSocketHandlerMapping$15(<generated>)
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$83518feb$$FastClassBySpringCGLIB$$448543ed.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$83518feb.stompWebSocketHandlerMapping(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1256)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+2019-01-02 16:34:07 -Mapped URL path [/endpointChat/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2019-01-02 16:34:07 -Initializing ExecutorService  'brokerChannelExecutor'
+2019-01-02 16:34:08 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-02 16:34:09 -Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@58c34bb3: startup date [Wed Jan 02 16:33:52 CST 2019]; root of context hierarchy
+2019-01-02 16:34:09 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-02 16:34:09 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-02 16:34:09 -Mapped URL path [/files/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-02 16:34:09 -Detected @ExceptionHandler methods in BDExceptionHandler
+2019-01-02 16:34:09 -[THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-01-02 16:34:13 -Starting beans in phase 2147483647
+2019-01-02 16:34:13 -Context refreshed
+2019-01-02 16:34:13 -Found 1 custom documentation plugin(s)
+2019-01-02 16:34:13 -Scanning for api listing references
+2019-01-02 16:34:14 -Generating unique operation named: removeUsingPOST_1
+2019-01-02 16:34:14 -Generating unique operation named: addUsingGET_1
+2019-01-02 16:34:14 -Generating unique operation named: editUsingGET_1
+2019-01-02 16:34:14 -Generating unique operation named: listUsingGET_1
+2019-01-02 16:34:14 -Generating unique operation named: removeUsingPOST_2
+2019-01-02 16:34:15 -Generating unique operation named: removeUsingPOST_3
+2019-01-02 16:34:15 -Generating unique operation named: saveUsingPOST_1
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingGET_1
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingHEAD_1
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingPOST_1
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingPUT_1
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingPATCH_1
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingDELETE_1
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingOPTIONS_1
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingTRACE_1
+2019-01-02 16:34:15 -Generating unique operation named: addUsingGET_2
+2019-01-02 16:34:15 -Generating unique operation named: editUsingGET_2
+2019-01-02 16:34:15 -Generating unique operation named: listUsingGET_2
+2019-01-02 16:34:15 -Generating unique operation named: removeUsingPOST_4
+2019-01-02 16:34:15 -Generating unique operation named: removeUsingPOST_5
+2019-01-02 16:34:15 -Generating unique operation named: saveUsingPOST_2
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingGET_2
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingHEAD_2
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingPOST_2
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingPUT_2
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingPATCH_2
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingDELETE_2
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingOPTIONS_2
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingTRACE_2
+2019-01-02 16:34:15 -Generating unique operation named: editUsingGET_3
+2019-01-02 16:34:15 -Generating unique operation named: listUsingGET_3
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingPOST_3
+2019-01-02 16:34:15 -Generating unique operation named: addUsingGET_3
+2019-01-02 16:34:15 -Generating unique operation named: editUsingGET_4
+2019-01-02 16:34:15 -Generating unique operation named: infoUsingGET_1
+2019-01-02 16:34:15 -Generating unique operation named: infoUsingHEAD_1
+2019-01-02 16:34:15 -Generating unique operation named: infoUsingPOST_1
+2019-01-02 16:34:15 -Generating unique operation named: infoUsingPUT_1
+2019-01-02 16:34:15 -Generating unique operation named: infoUsingPATCH_1
+2019-01-02 16:34:15 -Generating unique operation named: infoUsingDELETE_1
+2019-01-02 16:34:15 -Generating unique operation named: infoUsingOPTIONS_1
+2019-01-02 16:34:15 -Generating unique operation named: infoUsingTRACE_1
+2019-01-02 16:34:15 -Generating unique operation named: listUsingGET_4
+2019-01-02 16:34:15 -Generating unique operation named: removeUsingPOST_6
+2019-01-02 16:34:15 -Generating unique operation named: removeUsingPOST_7
+2019-01-02 16:34:15 -Generating unique operation named: saveUsingPOST_3
+2019-01-02 16:34:15 -Generating unique operation named: updateUsingPOST_4
+2019-01-02 16:34:15 -Generating unique operation named: listUsingGET_5
+2019-01-02 16:34:16 -Generating unique operation named: removeUsingPOST_8
+2019-01-02 16:34:16 -Generating unique operation named: loginUsingGET_1
+2019-01-02 16:34:16 -Generating unique operation named: loginUsingGET_2
+2019-01-02 16:34:16 -Generating unique operation named: addUsingGET_4
+2019-01-02 16:34:16 -Generating unique operation named: editUsingGET_5
+2019-01-02 16:34:16 -Generating unique operation named: listUsingGET_6
+2019-01-02 16:34:16 -Generating unique operation named: removeUsingPOST_9
+2019-01-02 16:34:16 -Generating unique operation named: saveUsingPOST_4
+2019-01-02 16:34:16 -Generating unique operation named: treeUsingGET_1
+2019-01-02 16:34:16 -Generating unique operation named: treeUsingGET_2
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingPOST_5
+2019-01-02 16:34:16 -Generating unique operation named: addUsingGET_5
+2019-01-02 16:34:16 -Generating unique operation named: editUsingGET_6
+2019-01-02 16:34:16 -Generating unique operation named: listUsingGET_7
+2019-01-02 16:34:16 -Generating unique operation named: removeUsingPOST_10
+2019-01-02 16:34:16 -Generating unique operation named: removeUsingPOST_11
+2019-01-02 16:34:16 -Generating unique operation named: saveUsingPOST_5
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingGET_3
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingHEAD_3
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingPOST_6
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingPUT_3
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingPATCH_3
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingDELETE_3
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingOPTIONS_3
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingTRACE_3
+2019-01-02 16:34:16 -Generating unique operation named: addUsingGET_6
+2019-01-02 16:34:16 -Generating unique operation named: batchRemoveUsingPOST_1
+2019-01-02 16:34:16 -Generating unique operation named: editUsingGET_7
+2019-01-02 16:34:16 -Generating unique operation named: listUsingGET_8
+2019-01-02 16:34:16 -Generating unique operation named: saveUsingPOST_6
+2019-01-02 16:34:16 -Generating unique operation named: saveUsingPOST_7
+2019-01-02 16:34:16 -Generating unique operation named: updateUsingPOST_7
+2019-01-02 16:34:16 -Generating unique operation named: listUsingGET_9
+2019-01-02 16:34:16 -Generating unique operation named: listUsingHEAD_1
+2019-01-02 16:34:16 -Generating unique operation named: listUsingPOST_1
+2019-01-02 16:34:16 -Generating unique operation named: listUsingPUT_1
+2019-01-02 16:34:16 -Generating unique operation named: listUsingPATCH_1
+2019-01-02 16:34:16 -Generating unique operation named: listUsingDELETE_1
+2019-01-02 16:34:16 -Generating unique operation named: listUsingOPTIONS_1
+2019-01-02 16:34:16 -Generating unique operation named: listUsingTRACE_1
+2019-01-02 16:34:16 -Generating unique operation named: addUsingGET_7
+2019-01-02 16:34:16 -Generating unique operation named: batchRemoveUsingPOST_2
+2019-01-02 16:34:16 -Generating unique operation named: editUsingGET_8
+2019-01-02 16:34:16 -Generating unique operation named: listUsingGET_10
+2019-01-02 16:34:17 -Generating unique operation named: removeUsingPOST_12
+2019-01-02 16:34:17 -Generating unique operation named: saveUsingPOST_8
+2019-01-02 16:34:17 -Generating unique operation named: treeUsingGET_3
+2019-01-02 16:34:17 -Generating unique operation named: treeViewUsingGET_1
+2019-01-02 16:34:17 -Generating unique operation named: updateUsingPOST_8
+2019-01-02 16:34:17 -Starting Quartz Scheduler now
+2019-01-02 16:34:17 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2019-01-02 16:34:17 -Starting...
+2019-01-02 16:34:17 -BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-01-02 16:34:17 -Started.
+2019-01-02 16:34:17 -Started TestDemo in 26.295 seconds (JVM running for 29.085)
+2019-01-02 16:34:17 -==>  Preparing: select `id`,`cron_expression`,`method_name`,`is_concurrent`,`description`,`update_by`,`bean_class`,`create_date`,`job_status`,`job_group`,`update_date`,`create_by`,`spring_bean`,`job_name` from sys_task order by id desc 
+2019-01-02 16:34:17 -==> Parameters: 
+2019-01-02 16:34:17 -<==      Total: 0
+2019-01-02 16:34:18 -Starting without optional epoll library
+2019-01-02 16:34:18 -Starting without optional kqueue library
+2019-01-02 16:34:21 -Closing org.springframework.web.context.support.GenericWebApplicationContext@58c34bb3: startup date [Wed Jan 02 16:33:52 CST 2019]; root of context hierarchy
+2019-01-02 16:34:21 -Stopping beans in phase 2147483647
+2019-01-02 16:34:21 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2019-01-02 16:34:21 -Stopping...
+2019-01-02 16:34:21 -BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-01-02 16:34:21 -Stopped.
+2019-01-02 16:34:22 -Shutting down ExecutorService 'brokerChannelExecutor'
+2019-01-02 16:34:22 -Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-01-02 16:34:22 -Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-01-02 16:34:22 -Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-01-02 16:34:22 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2019-01-02 16:34:22 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2019-01-02 16:34:22 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2019-01-02 16:34:22 -Shutting down Quartz Scheduler
+2019-01-02 16:34:22 -{dataSource-1} closed
