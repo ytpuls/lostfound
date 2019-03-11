@@ -1,5 +1,6 @@
 package com.lostfound.common.utils;
 
-public class UploadUtils {
+import com.lostfound.common.domain.TableDO;
 
+public class UploadUtils {
 }

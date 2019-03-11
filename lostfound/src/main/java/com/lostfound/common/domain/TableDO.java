@@ -1,5 +1,7 @@
 package com.lostfound.common.domain;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -9,7 +11,9 @@ import java.util.List;
  * @email sunlightcs@gmail.com
  * @date 2016年12月20日 上午12:02:55
  */
+@Data
 public class TableDO {
+    static String GD = "A";
     //表的名称
     private String tableName;
     //表的备注

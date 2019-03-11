@@ -30,6 +30,7 @@ import com.lostfound.common.utils.R;
 @Controller
 @RequestMapping("/${pathName}/${classname}")
 public class ${className}Controller {
+
 	@Autowired
 	private ${className}Service ${classname}Service;
 	
