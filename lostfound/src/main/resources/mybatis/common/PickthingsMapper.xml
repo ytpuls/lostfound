@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lostfound.common.dao.PickthingsDao">
+
+	<select id="get" resultType="com.lostfound.common.domain.PickthingsDO">
+		select `ID`,`ThingsName`,`PickPlace`,`PickTime`,`ThingsType`,`ThingsNo`,`ThingsImg`,`ThingsDes`,`StoragePlace`,`TelPhone`,`PublishTime`,`Status`,`UserName`,`UID` from pickthings where ID = #{value}
+	</select>
+
+	<select id="list" resultType="com.lostfound.common.domain.PickthingsDO">
+		select `ID`,`ThingsName`,`PickPlace`,`PickTime`,`ThingsType`,`ThingsNo`,`ThingsImg`,`ThingsDes`,`StoragePlace`,`TelPhone`,`PublishTime`,`Status`,`UserName`,`UID` from pickthings
+        <where>  
+		  		  <if test="id != null and id != ''"> and ID = #{id} </if>
+		  		  <if test="thingsname != null and thingsname != ''"> and ThingsName = #{thingsname} </if>
+		  		  <if test="pickplace != null and pickplace != ''"> and PickPlace = #{pickplace} </if>
+		  		  <if test="picktime != null and picktime != ''"> and PickTime = #{picktime} </if>
+		  		  <if test="thingstype != null and thingstype != ''"> and ThingsType = #{thingstype} </if>
+		  		  <if test="thingsno != null and thingsno != ''"> and ThingsNo = #{thingsno} </if>
+		  		  <if test="thingsimg != null and thingsimg != ''"> and ThingsImg = #{thingsimg} </if>
+		  		  <if test="thingsdes != null and thingsdes != ''"> and ThingsDes = #{thingsdes} </if>
+		  		  <if test="storageplace != null and storageplace != ''"> and StoragePlace = #{storageplace} </if>
+		  		  <if test="telphone != null and telphone != ''"> and TelPhone = #{telphone} </if>
+		  		  <if test="publishtime != null and publishtime != ''"> and PublishTime = #{publishtime} </if>
+		  		  <if test="status != null and status != ''"> and Status = #{status} </if>
+		  		  <if test="username != null and username != ''"> and UserName = #{username} </if>
+		  		  <if test="uid != null and uid != ''"> and UID = #{uid} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by ID desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from pickthings
+		 <where>  
+		  		  <if test="id != null and id != ''"> and ID = #{id} </if>
+		  		  <if test="thingsname != null and thingsname != ''"> and ThingsName = #{thingsname} </if>
+		  		  <if test="pickplace != null and pickplace != ''"> and PickPlace = #{pickplace} </if>
+		  		  <if test="picktime != null and picktime != ''"> and PickTime = #{picktime} </if>
+		  		  <if test="thingstype != null and thingstype != ''"> and ThingsType = #{thingstype} </if>
+		  		  <if test="thingsno != null and thingsno != ''"> and ThingsNo = #{thingsno} </if>
+		  		  <if test="thingsimg != null and thingsimg != ''"> and ThingsImg = #{thingsimg} </if>
+		  		  <if test="thingsdes != null and thingsdes != ''"> and ThingsDes = #{thingsdes} </if>
+		  		  <if test="storageplace != null and storageplace != ''"> and StoragePlace = #{storageplace} </if>
+		  		  <if test="telphone != null and telphone != ''"> and TelPhone = #{telphone} </if>
+		  		  <if test="publishtime != null and publishtime != ''"> and PublishTime = #{publishtime} </if>
+		  		  <if test="status != null and status != ''"> and Status = #{status} </if>
+		  		  <if test="username != null and username != ''"> and UserName = #{username} </if>
+		  		  <if test="uid != null and uid != ''"> and UID = #{uid} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.lostfound.common.domain.PickthingsDO">
+		insert into pickthings
+		(
+			`ID`, 
+			`ThingsName`, 
+			`PickPlace`, 
+			`PickTime`, 
+			`ThingsType`, 
+			`ThingsNo`, 
+			`ThingsImg`, 
+			`ThingsDes`, 
+			`StoragePlace`, 
+			`TelPhone`, 
+			`PublishTime`, 
+			`Status`, 
+			`UserName`, 
+			`UID`
+		)
+		values
+		(
+			#{id}, 
+			#{thingsname}, 
+			#{pickplace}, 
+			#{picktime}, 
+			#{thingstype}, 
+			#{thingsno}, 
+			#{thingsimg}, 
+			#{thingsdes}, 
+			#{storageplace}, 
+			#{telphone}, 
+			#{publishtime}, 
+			#{status}, 
+			#{username}, 
+			#{uid}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.lostfound.common.domain.PickthingsDO">
+		update pickthings 
+		<set>
+			<if test="thingsname != null">`ThingsName` = #{thingsname}, </if>
+			<if test="pickplace != null">`PickPlace` = #{pickplace}, </if>
+			<if test="picktime != null">`PickTime` = #{picktime}, </if>
+			<if test="thingstype != null">`ThingsType` = #{thingstype}, </if>
+			<if test="thingsno != null">`ThingsNo` = #{thingsno}, </if>
+			<if test="thingsimg != null">`ThingsImg` = #{thingsimg}, </if>
+			<if test="thingsdes != null">`ThingsDes` = #{thingsdes}, </if>
+			<if test="storageplace != null">`StoragePlace` = #{storageplace}, </if>
+			<if test="telphone != null">`TelPhone` = #{telphone}, </if>
+			<if test="publishtime != null">`PublishTime` = #{publishtime}, </if>
+			<if test="status != null">`Status` = #{status}, </if>
+			<if test="username != null">`UserName` = #{username}, </if>
+			<if test="uid != null">`UID` = #{uid}</if>
+		</set>
+		where ID = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from pickthings where ID = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from pickthings where ID in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

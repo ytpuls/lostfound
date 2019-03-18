@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+						<input id="ID" name="ID" th:value="${pickthings.ID}"  type="hidden">
+							<div class="form-group">	
+								<label class="col-sm-3 control-label">物品名称：</label>
+								<div class="col-sm-8">
+									<input id="thingsname" name="thingsname" th:value="${pickthings.thingsname}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">丢失地点：</label>
+								<div class="col-sm-8">
+									<input id="pickplace" name="pickplace" th:value="${pickthings.pickplace}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">丢失时间：</label>
+								<div class="col-sm-8">
+									<input id="picktime" name="picktime" th:value="${pickthings.picktime}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">物品类型：</label>
+								<div class="col-sm-8">
+									<input id="thingstype" name="thingstype" th:value="${pickthings.thingstype}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">物品编号：</label>
+								<div class="col-sm-8">
+									<input id="thingsno" name="thingsno" th:value="${pickthings.thingsno}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">物品图片：</label>
+								<div class="col-sm-8">
+									<input id="thingsimg" name="thingsimg" th:value="${pickthings.thingsimg}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">物品描述：</label>
+								<div class="col-sm-8">
+									<input id="thingsdes" name="thingsdes" th:value="${pickthings.thingsdes}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">暂存地点：</label>
+								<div class="col-sm-8">
+									<input id="storageplace" name="storageplace" th:value="${pickthings.storageplace}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">联系电话：</label>
+								<div class="col-sm-8">
+									<input id="telphone" name="telphone" th:value="${pickthings.telphone}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">发布时间：</label>
+								<div class="col-sm-8">
+									<input id="publishtime" name="publishtime" th:value="${pickthings.publishtime}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">状态：</label>
+								<div class="col-sm-8">
+									<input id="status" name="status" th:value="${pickthings.status}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">用户名：</label>
+								<div class="col-sm-8">
+									<input id="username" name="username" th:value="${pickthings.username}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">用户表 ID 外键：</label>
+								<div class="col-sm-8">
+									<input id="uid" name="uid" th:value="${pickthings.uid}" class="form-control" type="text">
+								</div>
+							</div>
+																					<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/common/pickthings/edit.js">
+	</script>
+</body>
+</html>
