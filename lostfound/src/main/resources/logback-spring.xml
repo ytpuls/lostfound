@@ -29,7 +29,9 @@
     </logger>
 
     <root level="error">
+        <!-- 部署到服务器上的时候要注释掉-->
         <appender-ref ref="console"/>
+
         <appender-ref ref="logFile" />
     </root>
 
