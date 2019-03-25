@@ -9,20 +9,20 @@
 				<div class="ibox-body">
 					<div class="fixed-table-toolbar">
 						<div class="columns pull-left">
-							<button shiro:hasPermission="common:lostthings:add" type="button" class="btn  btn-primary" onclick="add()">
+							<button shiro:hasPermission="common:message:add" type="button" class="btn  btn-primary" onclick="add()">
 								<i class="fa fa-plus" aria-hidden="true"></i>添加
 							</button>
-							<button shiro:hasPermission="common:lostthings:batchRemove" type="button" class="btn  btn-danger"
+							<button shiro:hasPermission="common:message:batchRemove" type="button" class="btn  btn-danger"
 								onclick="batchRemove()">
-								<i class="fa fa-trash" aria-hidden="true"></i>批量删除
+								<i class="fa fa-trash" aria-hidden="true"></i>删除
 							</button>
 						</div>
 						<div class="columns pull-right">
 							<button class="btn btn-success" onclick="reLoad()">查询</button>
 						</div>
 						<div class="columns pull-right col-md-2 nopadding">
-							<input id="losttime" type="text" class="form-control"
-								placeholder="丢失时间">
+							<input id="searchName" type="text" class="form-control"
+								placeholder="">
 						</div>
 					</div>
 					<table id="exampleTable" data-mobile-responsive="true">
@@ -36,20 +36,26 @@
 			<script type="text/javascript">
 				var s_edit_h = 'hidden';
 				var s_remove_h = 'hidden';
+				var s_resetPwd_h = 'hidden';
 			</script>
 		</div>
-		<div shiro:hasPermission="common:lostthings:edit">
+		<div shiro:hasPermission="common:message:edit">
 			<script type="text/javascript">
 				s_edit_h = '';
 			</script>
 		</div>
-		<div shiro:hasPermission="common:lostthings:remove">
+		<div shiro:hasPermission="common:message:remove">
 			<script type="text/javascript">
 				var s_remove_h = '';
 			</script>
 		</div>
+		<div shiro:hasPermission="common:message:resetPwd">
+			<script type="text/javascript">
+				var s_resetPwd_h = '';
+			</script>
+		</div>
 	</div>
 	<div th:include="include :: footer"></div>
-	<script type="text/javascript" src="/js/appjs/common/lostthings/lostthings.js"></script>
+	<script type="text/javascript" src="/js/appjs/common/message/message.js"></script>
 </body>
 </html>

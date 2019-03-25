@@ -1,5 +1,5 @@
 
-var prefix = "/common/lostthings"
+var prefix = "/common/message"
 $(function() {
 	load();
 });
@@ -32,9 +32,9 @@ function load() {
 							return {
 								//说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
 								limit: params.limit,
-								offset:params.offset,
+								offset:params.offset
 					           // name:$('#searchName').val(),
-								losttime:$('#losttime').val()
+					           // username:$('#searchName').val()
 							};
 						},
 						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，例如 toolbar 中的参数 如果
@@ -47,23 +47,31 @@ function load() {
 								{
 									checkbox : true
 								},
-													{
-									field : 'thingsdes', 
-									title : '描述' 
+																{
+									field : 'id', 
+									title : 'ID' 
 								},
 																{
-									field : 'publishtime', 
-									title : '发布时间',
-									formatter : function (value, row, index) {
-										if(value!=null){
-											return new Date(value).Format("yyyy-MM-dd");
-										}
-										else
-											return value;
-									}
-
+									field : 'title', 
+									title : '感谢标题' 
 								},
-														{
+																{
+									field : 'substance', 
+									title : '感谢内容' 
+								},
+																{
+									field : 'status', 
+									title : '状态' 
+								},
+																{
+									field : 'username', 
+									title : '感谢人' 
+								},
+																{
+									field : 'leavetime', 
+									title : '感谢时间' 
+								},
+																{
 									title : '操作',
 									field : 'id',
 									align : 'center',
@@ -74,26 +82,12 @@ function load() {
 										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
 												+ row.id
 												+ '\')"><i class="fa fa-remove"></i></a> ';
-										var f = '<a class="btn btn-success btn-sm" href="#" title="查看详情"  mce_href="#" onclick="edit(\''
+										var f = '<a class="btn btn-success btn-sm" href="#" title="备用"  mce_href="#" onclick="resetPwd(\''
 												+ row.id
-												+ '\')">查看详情</a> ';
-										if(s_edit_h == 'hidden'){
-											e = '';
-										}
-										if(s_remove_h == 'hidden'){
-											e = '';
-										}
-
-										return e + d + f;
+												+ '\')"><i class="fa fa-key"></i></a> ';
+										return e + d ;
 									}
 								} ]
-						// onLoadSuccess: function () {
-						// 	if (true) {
-						// 		//隐藏上述variablevalue列
-						// 		$('#exampleTable').bootstrapTable('hideColumn', 'id');
-						// 	}
-						// }
-
 					});
 }
 function reLoad() {
@@ -176,19 +170,4 @@ function batchRemove() {
 	}, function() {
 
 	});
-}
-Date.prototype.Format = function (fmt) { //author: meizz
-	var o = {
-		"M+": this.getMonth() + 1, //月份
-		"d+": this.getDate(), //日
-		"h+": this.getHours(), //小时
-		"m+": this.getMinutes(), //分
-		"s+": this.getSeconds(), //秒
-		"q+": Math.floor((this.getMonth() + 3) / 3), //季度
-		"S": this.getMilliseconds() //毫秒
-	};
-	if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-	for (var k in o)
-		if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-	return fmt;
 }

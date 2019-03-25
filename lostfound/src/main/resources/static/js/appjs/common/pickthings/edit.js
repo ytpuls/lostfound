@@ -1,4 +1,10 @@
 $().ready(function() {
+	laydate({
+		elem : '#picktime'
+	});
+	laydate({
+		elem : '#publishtime'
+	});
 	validateRule();
 });
 
@@ -6,6 +12,24 @@ $.validator.setDefaults({
 	submitHandler : function() {
 		update();
 	}
+});
+layui.use('upload', function () {
+	var upload = layui.upload;
+	//执行实例
+	var uploadInst = upload.render({
+		elem: '#test1', //绑定元素
+		url: '/common/sysFile/upload', //上传接口
+		size: 1000,
+		accept: 'file',
+		done: function (r) {
+			$("#img").attr("src",r.fileName);
+			$("#thingsimg").val(r.fileName);
+			layer.msg(r.msg);
+		},
+		error: function (r) {
+			layer.msg(r.msg);
+		}
+	});
 });
 function update() {
 	$.ajax({

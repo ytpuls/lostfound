@@ -2,104 +2,99 @@
 <html>
 <meta charset="utf-8">
 <head th:include="include :: header"></head>
+
 <body class="gray-bg">
-	<div class="wrapper wrapper-content ">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="ibox float-e-margins">
-					<div class="ibox-content">
-						<form class="form-horizontal m-t" id="signupForm">
-							<div class="form-group">	
-								<label class="col-sm-3 control-label">物品名称：</label>
-								<div class="col-sm-8">
-									<input id="thingsname" name="thingsname" class="form-control" type="text">
-								</div>
+<div class="wrapper wrapper-content ">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="ibox float-e-margins">
+				<div class="ibox-content">
+					<form class="form-horizontal m-t" id="signupForm">
+						<div class="form-group">
+							<label class="col-sm-3 control-label">失物名字：</label>
+							<div class="col-sm-8">
+								<input id="thingsname" name="thingsname" class="form-control" type="text">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">丢失地点：</label>
-								<div class="col-sm-8">
-									<input id="pickplace" name="pickplace" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">丢失地点：</label>
+							<div class="col-sm-8">
+								<input id="pickplace" name="pickplace" class="form-control" type="text">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">丢失时间：</label>
-								<div class="col-sm-8">
-									<input id="picktime" name="picktime" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">丢失时间：</label>
+							<div class="col-sm-8">
+								<input id="picktime" name="picktime" class="form-control laydate-icon layer-date" type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">
 							</div>
-							r							<div class="form-group">	
-								<label class="col-sm-3 control-label">物品类型：</label>
-								<div class="col-sm-8">
-									<input id="thingstype" name="thingstype" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">物品类型：</label>
+							<div class="col-sm-8">
+								<input id="thingstype" name="thingstype" class="form-control" type="text">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">物品编号：</label>
-								<div class="col-sm-8">
-									<input id="thingsno" name="thingsno" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">物品编号：</label>
+							<div class="col-sm-8">
+								<input id="thingsno" name="thingsno" class="form-control" type="text">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">物品图片：</label>
-								<div class="col-sm-8">
-									<input id="thingsimg" name="thingsimg" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">图片：</label>
+							<div class="col-sm-8">
+								<input id="thingsimg" name="thingsimg" class="form-control" type="hidden">
+								<img id="img" class="img-responsive">
+								<button type="button" class="layui-btn" id="test1">
+									<i class="fa fa-cloud"></i>上传文件
+								</button>
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">物品描述：</label>
-								<div class="col-sm-8">
-									<input id="thingsdes" name="thingsdes" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">描述：</label>
+							<div class="col-sm-8">
+								<input id="thingsdes" name="thingsdes" class="form-control" type="text">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">暂存地点：</label>
-								<div class="col-sm-8">
-									<input id="storageplace" name="storageplace" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">发布时间：</label>
+							<div class="col-sm-8">
+								<input id="publishtime" name="publishtime" class="form-control laydate-icon layer-date" type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">联系电话：</label>
-								<div class="col-sm-8">
-									<input id="telphone" name="telphone" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">状态：</label>
+							<div class="col-sm-8">
+								<input id="status" name="status" class="form-control" type="text">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">发布时间：</label>
-								<div class="col-sm-8">
-									<input id="publishtime" name="publishtime" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">用户名：</label>
+							<div class="col-sm-8">
+								<input id="username" name="username" class="form-control" type="text">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">状态：</label>
-								<div class="col-sm-8">
-									<input id="status" name="status" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">用户表 ID 外键：</label>
+							<div class="col-sm-8">
+								<input id="uid" name="uid" class="form-control" type="text">
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">用户名：</label>
-								<div class="col-sm-8">
-									<input id="username" name="username" class="form-control" type="text">
-								</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-8 col-sm-offset-3">
+								<button type="submit" class="btn btn-primary">提交</button>
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">用户表 ID 外键：</label>
-								<div class="col-sm-8">
-									<input id="uid" name="uid" class="form-control" type="text">
-								</div>
-							</div>
-																					<div class="form-group">
-								<div class="col-sm-8 col-sm-offset-3">
-									<button type="submit" class="btn btn-primary">提交</button>
-								</div>
-							</div>
-						</form>
-					</div>
+						</div>
+					</form>
 				</div>
 			</div>
+		</div>
 	</div>
-	</div>
-	<div th:include="include::footer"></div>
-	<script type="text/javascript" src="/js/appjs/common/pickthings/add.js">
-	</script>
+</div>
+<div th:include="include::footer"></div>
+<link rel="stylesheet" href="/css/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css"/>
+<script type="text/javascript" src="/js/bootstrap-datetimepicker.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/bootstrap-datetimepicker.zh-CN.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/appjs/common/pickthings/add.js"></script>
 </body>
 </html>

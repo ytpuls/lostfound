@@ -1,38 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration  scan="true" scanPeriod="60 seconds" debug="false">
     <contextName>logback</contextName>
+    <property name="LOG_PATH" value="/project/tomcat/tomcat_design/logs"/>
+    <property name="LOG_PATTERN" value="%d{HH:mm:ss} [%thread] %-5level %logger{56} - %msg%n"></property>
+
     <!--输出到控制台-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>${LOG_PATTERN}</pattern>
         </encoder>
     </appender>
+    <!-- INFO级别日志 -->
+    <appender name="LOGSTASH_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <file>${LOG_PATH}/lost_and_found.log</file>
 
-    <!--按天生成日志-->
-    <appender name="logFile"  class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <Prudent>true</Prudent>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>
-                applog/%d{yyyy-MM-dd}/%d{yyyy-MM-dd}.log
-            </FileNamePattern>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <FileNamePattern>${LOG_PATH}/lost_and_found.%i.log</FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <MaxIndex>100</MaxIndex>
         </rollingPolicy>
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} -%msg%n
-            </Pattern>
-        </layout>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>100MB</MaxFileSize>
+        </triggeringPolicy>
     </appender>
 
-    <logger name="com.lostfound" additivity="false">
-        <appender-ref ref="console"/>
-        <appender-ref ref="logFile" />
-    </logger>
+    <!-- ERROR级别日志 -->
+    <appender name="LOGSTASH_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <file>${LOG_PATH}/lost_and_found_error.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${LOG_PATH}/lost_and_found_error-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+    </appender>
 
-    <root level="error">
+
+    <root level="INFO">
         <!-- 部署到服务器上的时候要注释掉-->
         <appender-ref ref="console"/>
-
-        <appender-ref ref="logFile" />
+        <appender-ref ref="LOGSTASH_INFO"/>
+        <appender-ref ref="LOGSTASH_ERROR"/>
     </root>
 
 </configuration>
