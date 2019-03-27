@@ -43,10 +43,10 @@ public class LoginController extends BaseController {
 			if(fileService.isExist(fileDO.getUrl())){
 				model.addAttribute("picUrl",fileDO.getUrl());
 			}else {
-				model.addAttribute("picUrl","/img/photo_s.jpg");
+				model.addAttribute("picUrl","/img/png99.png");
 			}
 		}else {
-			model.addAttribute("picUrl","/img/photo_s.jpg");
+			model.addAttribute("picUrl","/img/png99.png");
 		}
 		model.addAttribute("username", getUser().getUsername());
 		return "index_v1";
