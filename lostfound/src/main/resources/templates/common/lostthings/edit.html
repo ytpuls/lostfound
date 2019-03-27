@@ -22,7 +22,7 @@
 									<input id="lostplace" name="lostplace" th:value="${lostthings.lostplace}" class="form-control" type="text">
 								</div>
 							</div>
-														<div class="form-group">	
+														<div class="form-group">
 								<label class="col-sm-3 control-label">丢失时间：</label>
 								<div class="col-sm-8">
 									<input id="losttime" name="losttime" th:value="${#dates.format(lostthings.losttime,'yyyy-MM-dd')}"class="form-control laydate-icon layer-date" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" type="text">
@@ -30,17 +30,18 @@
 							</div>
 														<div class="form-group">	
 								<label class="col-sm-3 control-label">物品类型：</label>
-								<div class="col-sm-8">
-									<input id="thingstype" name="thingstype" th:value="${lostthings.thingstype}" class="form-control" type="text">
-								</div>
+                                                            <div class="col-sm-8">
+                                                                <select id="thingstype" th:value="lostthings.thingstype"name="thingstype" class="form-control">
+                                                                    <option value="0">电子设备</option>
+                                                                    <option value="1">证件</option>
+                                                                    <option value="2">书籍</option>
+                                                                    <option value="3">一卡通</option>
+                                                                    <option value="4">衣物</option>
+                                                                    <option value="5">其他</option>
+                                                                </select>
+                                                            </div>
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">物品编号：</label>
-								<div class="col-sm-8">
-									<input id="thingsno" name="thingsno" th:value="${lostthings.thingsno}" class="form-control" type="text">
-								</div>
-							</div>
-														<div class="form-group">	
+														<div class="form-group">
 								<label class="col-sm-3 control-label">图片：</label>
 								<div class="col-sm-8">
 									<div class="col-sm-8">
@@ -56,30 +57,6 @@
 								<label class="col-sm-3 control-label">描述：</label>
 								<div class="col-sm-8">
 									<input id="thingsdes" name="thingsdes" th:value="${lostthings.thingsdes}" class="form-control" type="text">
-								</div>
-							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">发布时间：</label>
-								<div class="col-sm-8">
-									<input id="publishtime" name="publishtime" th:value="${#dates.format(lostthings.publishtime,'yyyy-MM-dd')}" class="form-control laydate-icon layer-date" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" type="text">
-								</div>
-							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">状态：</label>
-								<div class="col-sm-8">
-									<input id="status" name="status" th:value="${lostthings.status}" class="form-control" type="text">
-								</div>
-							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">用户名：</label>
-								<div class="col-sm-8">
-									<input id="username" name="username" th:value="${lostthings.username}" class="form-control" type="text">
-								</div>
-							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">用户表 ID 外键：</label>
-								<div class="col-sm-8">
-									<input id="uid" name="uid" th:value="${lostthings.uid}" class="form-control" type="text">
 								</div>
 							</div>
 																					<div class="form-group">

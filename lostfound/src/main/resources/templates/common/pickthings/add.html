@@ -9,21 +9,21 @@
 		<div class="col-sm-12">
 			<div class="ibox float-e-margins">
 				<div class="ibox-content">
-					<form class="form-horizontal m-t" id="signupForm">
+					<form class="form-horizontal m-t" id="signupForm" >
 						<div class="form-group">
-							<label class="col-sm-3 control-label">失物名字：</label>
+							<label class="col-sm-3 control-label">拾物名字：</label>
 							<div class="col-sm-8">
 								<input id="thingsname" name="thingsname" class="form-control" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-3 control-label">丢失地点：</label>
+							<label class="col-sm-3 control-label">拾到地点：</label>
 							<div class="col-sm-8">
 								<input id="pickplace" name="pickplace" class="form-control" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-3 control-label">丢失时间：</label>
+							<label class="col-sm-3 control-label">拾到时间：</label>
 							<div class="col-sm-8">
 								<input id="picktime" name="picktime" class="form-control laydate-icon layer-date" type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">
 							</div>
@@ -31,13 +31,14 @@
 						<div class="form-group">
 							<label class="col-sm-3 control-label">物品类型：</label>
 							<div class="col-sm-8">
-								<input id="thingstype" name="thingstype" class="form-control" type="text">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">物品编号：</label>
-							<div class="col-sm-8">
-								<input id="thingsno" name="thingsno" class="form-control" type="text">
+								<select id="thingstype" name="thingstype" class="form-control">
+                                    <option value="0">电子设备</option>
+                                    <option value="1">证件</option>
+                                    <option value="2">书籍</option>
+                                    <option value="3">一卡通</option>
+                                    <option value="4">衣物</option>
+                                    <option value="5">其他</option>
+                                </select>
 							</div>
 						</div>
 						<div class="form-group">
@@ -56,30 +57,7 @@
 								<input id="thingsdes" name="thingsdes" class="form-control" type="text">
 							</div>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">发布时间：</label>
-							<div class="col-sm-8">
-								<input id="publishtime" name="publishtime" class="form-control laydate-icon layer-date" type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">状态：</label>
-							<div class="col-sm-8">
-								<input id="status" name="status" class="form-control" type="text">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">用户名：</label>
-							<div class="col-sm-8">
-								<input id="username" name="username" class="form-control" type="text">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">用户表 ID 外键：</label>
-							<div class="col-sm-8">
-								<input id="uid" name="uid" class="form-control" type="text">
-							</div>
-						</div>
+
 						<div class="form-group">
 							<div class="col-sm-8 col-sm-offset-3">
 								<button type="submit" class="btn btn-primary">提交</button>

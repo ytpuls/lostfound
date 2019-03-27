@@ -1,8 +1,10 @@
 package com.lostfound.common.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.lostfound.common.domain.Constants;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,11 +42,18 @@ public class LostthingsController extends BaseController{
 	String Lostthings(){
 	    return "common/lostthings/lostthings";
 	}
-	
-	@ResponseBody
+
+    @GetMapping("/my")
+    @RequiresPermissions("common:lostthings:my")
+    String myLostthings(){
+        return "common/lostthings/my";
+    }
+
+    @ResponseBody
 	@GetMapping("/list")
 	@RequiresPermissions("common:lostthings:lostthings")
 	public PageUtils list(@RequestParam Map<String, Object> params){
+
 		//查询列表数据
         Query query = new Query(params);
 		List<LostthingsDO> lostthingsList = lostthingsService.list(query);
@@ -52,8 +61,21 @@ public class LostthingsController extends BaseController{
 		PageUtils pageUtils = new PageUtils(lostthingsList, total);
 		return pageUtils;
 	}
-	
-	@GetMapping("/add")
+    @ResponseBody
+    @GetMapping("/mylist")
+    @RequiresPermissions("common:lostthings:lostthings")
+    public PageUtils mylist(@RequestParam Map<String, Object> params){
+
+        //查询列表数据
+        params.put("username",getUsername());
+        Query query = new Query(params);
+        List<LostthingsDO> lostthingsList = lostthingsService.list(query);
+        int total = lostthingsService.count(query);
+        PageUtils pageUtils = new PageUtils(lostthingsList, total);
+        return pageUtils;
+    }
+
+    @GetMapping("/add")
 	@RequiresPermissions("common:lostthings:add")
 	String add(){
 	    return "common/lostthings/add";
@@ -74,6 +96,10 @@ public class LostthingsController extends BaseController{
 	@PostMapping("/save")
 	@RequiresPermissions("common:lostthings:add")
 	public R save( LostthingsDO lostthings){
+	    lostthings.setUid(getUserId());
+	    lostthings.setPublishtime(new Date());
+	    lostthings.setStatus(Constants.ENABLE);
+	    lostthings.setUsername(getUsername());
 		if(lostthingsService.save(lostthings)>0){
 			return R.ok();
 		}
@@ -86,6 +112,10 @@ public class LostthingsController extends BaseController{
 	@RequestMapping("/update")
 	@RequiresPermissions("common:lostthings:edit")
 	public R update( LostthingsDO lostthings){
+        lostthings.setUid(getUserId());
+        lostthings.setPublishtime(new Date());
+        lostthings.setStatus(Constants.ENABLE);
+        lostthings.setUsername(getUsername());
 		lostthingsService.update(lostthings);
 		return R.ok();
 	}

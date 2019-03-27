@@ -1,8 +1,11 @@
 package com.lostfound.common.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.lostfound.common.domain.Constants;
+import com.lostfound.common.domain.LostthingsDO;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,8 +43,14 @@ public class PickthingsController extends BaseController{
 	String Pickthings(){
 	    return "common/pickthings/pickthings";
 	}
-	
-	@ResponseBody
+
+    @GetMapping("/my")
+    @RequiresPermissions("common:lostthings:my")
+    String myPickthings(){
+        return "common/pickthings/my";
+    }
+
+    @ResponseBody
 	@GetMapping("/list")
 	@RequiresPermissions("common:pickthings:pickthings")
 	public PageUtils list(@RequestParam Map<String, Object> params){
@@ -52,7 +61,19 @@ public class PickthingsController extends BaseController{
 		PageUtils pageUtils = new PageUtils(pickthingsList, total);
 		return pageUtils;
 	}
-	
+    @ResponseBody
+    @GetMapping("/mylist")
+    @RequiresPermissions("common:lostthings:lostthings")
+    public PageUtils mylist(@RequestParam Map<String, Object> params){
+
+        //查询列表数据
+        params.put("username",getUsername());
+        Query query = new Query(params);
+        List<PickthingsDO> pickthingsList = pickthingsService.list(query);
+        int total = pickthingsService.count(query);
+        PageUtils pageUtils = new PageUtils(pickthingsList, total);
+        return pageUtils;
+    }
 	@GetMapping("/add")
 	@RequiresPermissions("common:pickthings:add")
 	String add(){
@@ -74,6 +95,10 @@ public class PickthingsController extends BaseController{
 	@PostMapping("/save")
 	@RequiresPermissions("common:pickthings:add")
 	public R save( PickthingsDO pickthings){
+        pickthings.setUid(getUserId());
+        pickthings.setPublishtime(new Date());
+        pickthings.setStatus(Constants.ENABLE);
+        pickthings.setUsername(getUsername());
 		if(pickthingsService.save(pickthings)>0){
 			return R.ok();
 		}
@@ -86,6 +111,10 @@ public class PickthingsController extends BaseController{
 	@RequestMapping("/update")
 	@RequiresPermissions("common:pickthings:edit")
 	public R update( PickthingsDO pickthings){
+        pickthings.setUid(getUserId());
+        pickthings.setPublishtime(new Date());
+        pickthings.setStatus(Constants.ENABLE);
+        pickthings.setUsername(getUsername());
 		pickthingsService.update(pickthings);
 		return R.ok();
 	}

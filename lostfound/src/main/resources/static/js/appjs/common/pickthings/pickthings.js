@@ -1,6 +1,9 @@
 
 var prefix = "/common/pickthings"
 $(function() {
+    laydate({
+        elem : '#picktime'
+    });
 	load();
 });
 

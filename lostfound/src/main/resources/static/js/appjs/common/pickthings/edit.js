@@ -2,9 +2,6 @@ $().ready(function() {
 	laydate({
 		elem : '#picktime'
 	});
-	laydate({
-		elem : '#publishtime'
-	});
 	validateRule();
 });
 

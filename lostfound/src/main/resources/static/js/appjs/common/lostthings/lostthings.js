@@ -1,6 +1,9 @@
 
 var prefix = "/common/lostthings"
 $(function() {
+    laydate({
+        elem : '#losttime'
+    });
 	load();
 });
 

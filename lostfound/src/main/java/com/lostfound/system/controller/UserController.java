@@ -61,7 +61,6 @@ public class UserController extends BaseController {
 		return prefix + "/add";
 	}
 
-	@RequiresPermissions("sys:user:edit")
 	@Log("编辑用户")
 	@GetMapping("/edit/{id}")
 	String edit(Model model, @PathVariable("id") Long id) {
@@ -87,7 +86,6 @@ public class UserController extends BaseController {
 		return R.error();
 	}
 
-	@RequiresPermissions("sys:user:edit")
 	@Log("更新用户")
 	@PostMapping("/update")
 	@ResponseBody
@@ -102,7 +100,6 @@ public class UserController extends BaseController {
 	}
 
 
-	@RequiresPermissions("sys:user:edit")
 	@Log("更新用户")
 	@PostMapping("/updatePeronal")
 	@ResponseBody
@@ -131,7 +128,6 @@ public class UserController extends BaseController {
 		return R.error();
 	}
 
-	@RequiresPermissions("sys:user:batchRemove")
 	@Log("批量删除用户")
 	@PostMapping("/batchRemove")
 	@ResponseBody
@@ -153,7 +149,7 @@ public class UserController extends BaseController {
 		return !userService.exit(params);
 	}
 
-	@RequiresPermissions("sys:user:resetPwd")
+
 	@Log("请求更改用户密码")
 	@GetMapping("/resetPwd/{id}")
 	String resetPwd(@PathVariable("id") Long userId, Model model) {
@@ -179,7 +175,6 @@ public class UserController extends BaseController {
 		}
 
 	}
-	@RequiresPermissions("sys:user:resetPwd")
 	@Log("admin提交更改用户密码")
 	@PostMapping("/adminResetPwd")
 	@ResponseBody

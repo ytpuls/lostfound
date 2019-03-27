@@ -2,9 +2,6 @@ $().ready(function() {
 	laydate({
 		elem : '#losttime'
 	});
-	laydate({
-		elem : '#publishtime'
-	});
 	validateRule();
 });
 
