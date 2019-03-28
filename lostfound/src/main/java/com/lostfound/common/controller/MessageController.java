@@ -1,8 +1,10 @@
 package com.lostfound.common.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.lostfound.common.domain.Constants;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,7 +32,7 @@ import com.lostfound.common.utils.R;
  
 @Controller
 @RequestMapping("/common/message")
-public class MessageController {
+public class MessageController extends BaseController{
 
 	@Autowired
 	private MessageService messageService;
@@ -74,6 +76,9 @@ public class MessageController {
 	@PostMapping("/save")
 	@RequiresPermissions("common:message:add")
 	public R save( MessageDO message){
+	    message.setLeavetime(new Date());
+	    message.setStatus(Constants.ENABLE);
+	    message.setUsername(getUsername());
 		if(messageService.save(message)>0){
 			return R.ok();
 		}
@@ -86,6 +91,9 @@ public class MessageController {
 	@RequestMapping("/update")
 	@RequiresPermissions("common:message:edit")
 	public R update( MessageDO message){
+        message.setLeavetime(new Date());
+        message.setStatus(Constants.ENABLE);
+        message.setUsername(getUsername());
 		messageService.update(message);
 		return R.ok();
 	}

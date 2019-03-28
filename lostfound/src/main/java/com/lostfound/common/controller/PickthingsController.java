@@ -87,7 +87,13 @@ public class PickthingsController extends BaseController{
 		model.addAttribute("pickthings", pickthings);
 	    return "common/pickthings/edit";
 	}
-	
+    @GetMapping("/detail/{id}")
+    @RequiresPermissions("common:pickthings:detail")
+    String detail(@PathVariable("id") Long id,Model model){
+        PickthingsDO pickthings = pickthingsService.get(id);
+        model.addAttribute("pickthings", pickthings);
+        return "common/pickthings/detail";
+    }
 	/**
 	 * 保存
 	 */

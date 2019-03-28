@@ -88,6 +88,14 @@ public class LostthingsController extends BaseController{
 		model.addAttribute("lostthings", lostthings);
 	    return "common/lostthings/edit";
 	}
+
+    @GetMapping("/detail/{id}")
+    @RequiresPermissions("common:lostthings:detail")
+    String detail(@PathVariable("id") Long id,Model model){
+        LostthingsDO lostthings = lostthingsService.get(id);
+        model.addAttribute("lostthings", lostthings);
+        return "common/lostthings/detail";
+    }
 	
 	/**
 	 * 保存

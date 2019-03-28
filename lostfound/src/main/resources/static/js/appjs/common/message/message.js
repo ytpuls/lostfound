@@ -53,24 +53,24 @@ function load() {
 								},
 																{
 									field : 'title', 
-									title : '感谢标题' 
+									title : '标题'
 								},
-																{
-									field : 'substance', 
-									title : '感谢内容' 
-								},
-																{
-									field : 'status', 
-									title : '状态' 
-								},
-																{
-									field : 'username', 
-									title : '感谢人' 
-								},
-																{
-									field : 'leavetime', 
-									title : '感谢时间' 
-								},
+								// 								{
+								// 	field : 'substance',
+								// 	title : '内容'
+								// },
+								// 								{
+								// 	field : 'status',
+								// 	title : '状态'
+								// },
+								// 								{
+								// 	field : 'username',
+								// 	title : '感谢人'
+								// },
+								// 								{
+								// 	field : 'leavetime',
+								// 	title : '感谢时间'
+								// },
 																{
 									title : '操作',
 									field : 'id',
@@ -78,16 +78,18 @@ function load() {
 									formatter : function(value, row, index) {
 										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="编辑" onclick="edit(\''
 												+ row.id
-												+ '\')"><i class="fa fa-edit"></i></a> ';
+												+ '\')">编辑</i></a> ';
 										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
 												+ row.id
-												+ '\')"><i class="fa fa-remove"></i></a> ';
-										var f = '<a class="btn btn-success btn-sm" href="#" title="备用"  mce_href="#" onclick="resetPwd(\''
-												+ row.id
-												+ '\')"><i class="fa fa-key"></i></a> ';
-										return e + d ;
+												+ '\')">删除</a> ';
+                                        var f = '<a class="btn btn-success btn-sm" href="#" title="查看详情"  mce_href="#" onclick="edit(\''
+                                            + row.id
+                                            + '\')">查看详情</a> ';
+
+                                        return e + d + f;
 									}
-								} ]
+								} ],
+
 					});
 }
 function reLoad() {

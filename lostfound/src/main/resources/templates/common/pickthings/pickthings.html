@@ -10,7 +10,7 @@
 				<div class="fixed-table-toolbar">
 					<div class="columns pull-left">
 						<button shiro:hasPermission="common:pickthings:add" type="button" class="btn  btn-primary" onclick="add()">
-							<i class="fa fa-plus" aria-hidden="true"></i>添加
+							<i class="fa fa-plus" aria-hidden="true"></i>发布失物招领
 						</button>
 						<button shiro:hasPermission="common:pickthings:batchRemove" type="button" class="btn  btn-danger"
 								onclick="batchRemove()">
@@ -36,6 +36,7 @@
 	<script type="text/javascript">
 		var s_edit_h = 'hidden';
 		var s_remove_h = 'hidden';
+        var s_detail_h = 'hidden';
 	</script>
 </div>
 <div shiro:hasPermission="common:pickthings:edit">
@@ -47,6 +48,11 @@
 	<script type="text/javascript">
 		var s_remove_h = '';
 	</script>
+</div>
+<div shiro:hasPermission="common:pickthings:detail">
+    <script type="text/javascript">
+        var s_detail_h = '';
+    </script>
 </div>
 </div>
 <div th:include="include :: footer"></div>

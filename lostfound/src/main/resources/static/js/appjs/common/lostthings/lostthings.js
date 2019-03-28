@@ -73,25 +73,18 @@ function load() {
 									formatter : function(value, row, index) {
 										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="编辑" onclick="edit(\''
 												+ row.id
-												+ '\')"><i class="fa fa-edit"></i></a> ';
-										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
+												+ '\')">编辑</a> ';
+										var d = '<a class="btn btn-danger btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
 												+ row.id
-												+ '\')"><i class="fa fa-remove"></i></a> ';
-										var f = '<a class="btn btn-success btn-sm" href="#" title="查看详情"  mce_href="#" onclick="edit(\''
+												+ '\')">删除</a> ';
+										var f = '<a class="btn btn-success btn-sm '+s_detail_h+'" href="#" title="查看详情"  mce_href="#" onclick="detail(\''
 												+ row.id
 												+ '\')">查看详情</a> ';
-										if(s_edit_h == 'hidden'){
-											e = '';
-										}
-										if(s_remove_h == 'hidden'){
-											e = '';
-										}
-
 										return e + d + f;
 									}
-								} ]
+								} ],
 						// onLoadSuccess: function () {
-						// 	if (true) {
+						// 	if (s_remove_h == 'hidden') {
 						// 		//隐藏上述variablevalue列
 						// 		$('#exampleTable').bootstrapTable('hideColumn', 'id');
 						// 	}
@@ -121,6 +114,16 @@ function edit(id) {
 		area : [ '800px', '520px' ],
 		content : prefix + '/edit/' + id // iframe的url
 	});
+}
+function detail(id) {
+    layer.open({
+        type : 2,
+        title : '详情',
+        maxmin : true,
+        shadeClose : false, // 点击遮罩关闭层
+        area : [ '800px', '520px' ],
+        content : prefix + '/detail/' + id // iframe的url
+    });
 }
 function remove(id) {
 	layer.confirm('确定要删除选中的记录？', {
