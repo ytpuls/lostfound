@@ -2,6 +2,8 @@ package com.lostfound.common.aspect;
 
 import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -32,6 +34,7 @@ public class LogAspect {
     @Autowired
     LogService logService;
 
+    private ExecutorService executor = Executors.newFixedThreadPool(1);
 
     @Pointcut("@annotation(com.lostfound.common.annotation.Log)")
     public void logPointCut() {
@@ -44,12 +47,11 @@ public class LogAspect {
         Object result = point.proceed();
         // 执行时长(毫秒)
         long time = System.currentTimeMillis() - beginTime;
-        //异步保存日志
-        saveLog(point, time);
+        executor.submit(()->saveLog(point,time));
         return result;
     }
 
-    void saveLog(ProceedingJoinPoint joinPoint, long time) throws InterruptedException {
+    void saveLog(ProceedingJoinPoint joinPoint, long time) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         LogDO sysLog = new LogDO();

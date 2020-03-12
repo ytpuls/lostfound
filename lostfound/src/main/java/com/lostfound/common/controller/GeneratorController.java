@@ -43,13 +43,7 @@ public class GeneratorController {
 	public void code(HttpServletRequest request, HttpServletResponse response,
 			@PathVariable("tableName") String tableName) throws IOException {
 		String[] tableNames = new String[] { tableName };
-		byte[] data = generatorService.generatorCode(tableNames);
-		response.reset();
-		response.setHeader("Content-Disposition", "attachment; filename=\"lostfound.zip\"");
-		response.addHeader("Content-Length", "" + data.length);
-		response.setContentType("application/octet-stream; charset=UTF-8");
-
-		IOUtils.write(data, response.getOutputStream());
+		generatorService.generatorCode(tableNames);
 	}
 
 	@RequestMapping("/batchCode")

@@ -1,31 +1,90 @@
 package com.lostfound.common.utils;
 
-
 import com.lostfound.common.config.Constant;
+import com.lostfound.common.dao.GeneratorMapper;
 import com.lostfound.common.domain.ColumnDO;
 import com.lostfound.common.domain.TableDO;
+import com.lostfound.common.service.GeneratorService;
+import com.lostfound.common.service.impl.GeneratorServiceImpl;
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.WordUtils;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
-import org.thymeleaf.Thymeleaf;
 
 import java.io.*;
+import java.sql.*;
 import java.util.*;
-import java.util.zip.ZipEntry;
+import java.util.Date;
 import java.util.zip.ZipOutputStream;
 
 /**
- * 代码生成器   工具类
- */
-public class GenUtils {
-    public static String project_name = "lostfound";
+ * @ClassName CodeUtil
+ * @Description
+ * @Author yangtao@biyouxinli.com
+ * @Date 2019/10/23 0023 11:44
+ **/
+public class CodeUtil {
+    private static String mysql_url = "localhost";
+    private static String mysql_account = "root";
+    private static String mysql_password = "root";
+    private static String database = "lostfound";
+    private static String project_name = "lostfound";
 
+
+    public void  generatorCode(String[] tableNames) throws SQLException {
+        // 数据连Connection获取,自己想办法就行.
+        Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/" + database, mysql_account, mysql_password);
+        Statement st = conn.createStatement();
+
+        for(String tableName : tableNames){
+
+            //查询表信息
+            Map<String, String> table = getTableInfo(tableName,st);
+            //查询列信息
+             List<Map<String, String>> columns = getColumsInfo(tableName,st);
+            //生成代码
+           generatorCode(table, columns);
+        }
+    }
+
+    private List<Map<String, String>> getColumsInfo(String tableName,Statement st) throws SQLException {
+        String strsql = "SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '"
+                + tableName + "' AND table_schema = '" + database + "';";// +" WHERE ROWNUM=1"
+        ResultSet rs = st.executeQuery(strsql);
+        List<Map<String, String>> columnsInfo= new ArrayList<>();
+        while (rs.next()){
+            Map<String,String> map = new HashMap<>();
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int columnsCount = rsmd.getColumnCount();
+            for (int i = 1;i<=columnsCount;i++){
+                String columnName = rsmd.getColumnName(i);
+                map.put(columnName,rs.getString(columnName));
+            }
+            columnsInfo.add(map);
+        }
+        return  columnsInfo;
+    }
+
+    private Map<String,String> getTableInfo(String tableName,Statement st) throws SQLException {
+        Map<String,String> tableInfo = new HashMap<>();
+        String strsql = "select table_schema tableSchema, table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables \r\n"
+                + "	where table_schema = '"+database+"' and table_name = '"+tableName+"';";
+
+        ResultSet rs = st.executeQuery(strsql);
+        rs.first();
+        tableInfo.put("tableName",rs.getString("tableName"));
+        tableInfo.put("engine",rs.getString("engine"));
+        tableInfo.put("tableComment",rs.getString("tableComment"));
+        tableInfo.put("createTime",rs.getString("createTime"));
+        tableInfo.put("tableSchema",rs.getString("tableSchema"));
+        return tableInfo;
+
+    }
 
     public static List<String> getTemplates() {
         List<String> templates = new ArrayList<String>();
@@ -63,7 +122,7 @@ public class GenUtils {
         //表名转换成Java类名
         String className = tableToJava(tableDO.getTableName(), config.getString("tablePrefix"), config.getString("autoRemovePre"));
         tableDO.setClassName(className);
-        tableDO.setClassname(StringUtils.uncapitalize(className));
+        tableDO.setClassname(org.apache.commons.lang.StringUtils.uncapitalize(className));
 
         //列信息
         List<ColumnDO> columsList = new ArrayList<>();
@@ -77,7 +136,7 @@ public class GenUtils {
             //列名转换成Java属性名
             String attrName = columnToJava(columnDO.getColumnName());
             columnDO.setAttrName(attrName);
-            columnDO.setAttrname(StringUtils.uncapitalize(attrName));
+            columnDO.setAttrname(org.apache.commons.lang.StringUtils.uncapitalize(attrName));
 
             //列的数据类型，转换成Java类型
             String attrType = config.getString(columnDO.getDataType(), "unknowType");
@@ -109,7 +168,12 @@ public class GenUtils {
         map.put("pk", tableDO.getPk());
         map.put("className", tableDO.getClassName());
         map.put("classname", tableDO.getClassname());
-        map.put("pathName", tableDO.getDbName().substring(tableDO.getDbName().indexOf(config.getString("dataBasePrefix"))));
+        if(tableDO.getDbName().indexOf(config.getString("dataBasePrefix"))==-1){
+            map.put("pathName", tableDO.getDbName());
+        }else {
+            map.put("pathName",tableDO.getDbName().substring(tableDO.getDbName().indexOf(config.getString("dataBasePrefix"))));
+        }
+
         map.put("columns", tableDO.getColumns());
         map.put("package", config.getString("package"));
         map.put("author", config.getString("author"));
@@ -159,7 +223,7 @@ public class GenUtils {
         if (Constant.AUTO_REOMVE_PRE.equals(autoRemovePre)) {
             tableName = tableName.substring(tableName.indexOf("_") + 1);
         }
-        if (StringUtils.isNotBlank(tablePrefix)) {
+        if (org.apache.commons.lang.StringUtils.isNotBlank(tablePrefix)) {
             tableName = tableName.replace(tablePrefix, "");
         }
 
@@ -248,5 +312,10 @@ public class GenUtils {
 //		}
 
         return null;
+    }
+    public static void  main(String[] args) throws SQLException {
+        CodeUtil util = new CodeUtil();
+        String[] tables = {"tb_daily_mood"};
+        util.generatorCode(tables);
     }
 }

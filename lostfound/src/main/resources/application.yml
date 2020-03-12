@@ -2,7 +2,7 @@ lostfound:
   uploadPath: c:/var/uploaded_files/
 server:
   session-timeout: 1800
-  port: 8080
+  port: 8180
 
 #    tomcat:
 #        max-threads: 1000

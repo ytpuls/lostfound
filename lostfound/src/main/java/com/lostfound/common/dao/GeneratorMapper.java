@@ -3,10 +3,15 @@ package com.lostfound.common.dao;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
+@Mapper
 public interface GeneratorMapper {
-	@Select("select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables"
+    @Select("select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables"
 			+ " where table_schema = (select database())")
 	List<Map<String, Object>> list();
 

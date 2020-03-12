@@ -27,6 +27,8 @@ public class TableDO {
     private String className;
     //类名(第一个字母小写)，如：sys_user => sysUser
     private String classname;
+    //数据库名称，用于管理站路由前缀
+    private String dbName;
 
     public String getTableName() {
         return tableName;

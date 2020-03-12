@@ -1,0 +1,444 @@
+2019-03-13 15:35:18 -Starting LostFoundApplication on XTZ-01806071735 with PID 2000 (C:\Users\Administrator\Desktop\MyGitHub\lostfound\lostfound\target\classes started by Administrator in C:\Users\Administrator\Desktop\MyGitHub\lostfound)
+2019-03-13 15:35:18 -Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2019-03-13 15:35:18 -The following profiles are active: dev
+2019-03-13 15:35:18 -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2783717b: startup date [Wed Mar 13 15:35:18 CST 2019]; root of context hierarchy
+2019-03-13 15:35:21 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-13 15:35:22 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4a1303e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:22 -Bean 'shiroConfig' of type [com.lostfound.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$969a0c51] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:23 -Bean 'userRealm' of type [com.lostfound.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:23 -No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Administrator/.m2/repository/net/sf/ehcache/ehcache/2.10.5/ehcache-2.10.5.jar!/ehcache-failsafe.xml
+2019-03-13 15:35:23 -Bean 'cacheManager2' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:23 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:23 -Cache with name 'com.lostfound.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2019-03-13 15:35:23 -Added EhCache named [com.lostfound.system.shiro.UserRealm.authorizationCache]
+2019-03-13 15:35:23 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:23 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:23 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:23 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-13 15:35:24 -Tomcat initialized with port(s): 8080 (http)
+2019-03-13 15:35:24 -Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 15:35:24 -Starting service [Tomcat]
+2019-03-13 15:35:24 -Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-03-13 15:35:24 -Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2019-03-13 15:35:24 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-03-13 15:35:24 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-03-13 15:35:25 -OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2019-03-13 15:35:26 -Initializing Spring embedded WebApplicationContext
+2019-03-13 15:35:26 -Root WebApplicationContext: initialization completed in 7149 ms
+2019-03-13 15:35:26 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 15:35:26 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 15:35:26 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-13 15:35:26 -Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 15:35:26 -Filter xssFilter was not registered (disabled)
+2019-03-13 15:35:26 -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 15:35:26 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2019-03-13 15:35:26 -Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 15:35:26 -Servlet dispatcherServlet mapped to [/]
+2019-03-13 15:35:27 -{dataSource-1} inited
+2019-03-13 15:35:27 -ApplicationContext registed-->org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2783717b: startup date [Wed Mar 13 15:35:18 CST 2019]; root of context hierarchy
+2019-03-13 15:35:28 -Using default implementation for ThreadExecutor
+2019-03-13 15:35:28 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-03-13 15:35:28 -Quartz Scheduler v.2.2.1 created.
+2019-03-13 15:35:28 -RAMJobStore initialized.
+2019-03-13 15:35:28 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-03-13 15:35:28 -Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2019-03-13 15:35:28 -Quartz scheduler version: 2.2.1
+2019-03-13 15:35:28 -JobFactory set to: com.lostfound.common.quartz.factory.JobFactory@15130002
+2019-03-13 15:35:28 -Initializing ExecutorService  'clientInboundChannelExecutor'
+2019-03-13 15:35:28 -Initializing ExecutorService  'clientOutboundChannelExecutor'
+2019-03-13 15:35:29 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.add()
+2019-03-13 15:35:29 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.remove(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.remove(java.lang.Long[])
+2019-03-13 15:35:29 -Mapped "{[/common/dict/update]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.update(com.lostfound.common.domain.DictDO)
+2019-03-13 15:35:29 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.DictController.save(com.lostfound.common.domain.DictDO)
+2019-03-13 15:35:29 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.lostfound.common.domain.DictDO> com.lostfound.common.controller.DictController.listType()
+2019-03-13 15:35:29 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.dict()
+2019-03-13 15:35:29 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/common/dict/list/{type}],methods=[GET]}" onto public java.util.List<com.lostfound.common.domain.DictDO> com.lostfound.common.controller.DictController.listByType(java.lang.String)
+2019-03-13 15:35:29 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.add()
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.remove(java.lang.Long[])
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/update]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.update(com.lostfound.common.domain.FileDO)
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.FileController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.save(com.lostfound.common.domain.FileDO)
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/info/{id}]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.FileController.info(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/edit],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile/upload],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2019-03-13 15:35:29 -Mapped "{[/common/sysFile],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.FileController.sysFile(org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/common/generator/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.GeneratorController.update(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.lostfound.common.controller.GeneratorController.list()
+2019-03-13 15:35:29 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.lostfound.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-03-13 15:35:29 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.GeneratorController.generator()
+2019-03-13 15:35:29 -Mapped "{[/common/generator/edit],methods=[GET]}" onto public java.lang.String com.lostfound.common.controller.GeneratorController.edit(org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/common/generator/batchCode]}" onto public void com.lostfound.common.controller.GeneratorController.batchCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-03-13 15:35:29 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.add()
+2019-03-13 15:35:29 -Mapped "{[/common/job/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.remove(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.remove(java.lang.Long[])
+2019-03-13 15:35:29 -Mapped "{[/common/job/update],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.update(com.lostfound.common.domain.TaskDO)
+2019-03-13 15:35:29 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.save(com.lostfound.common.domain.TaskDO)
+2019-03-13 15:35:29 -Mapped "{[/common/job/info/{id}]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.info(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.JobController.taskScheduleJob()
+2019-03-13 15:35:29 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2019-03-13 15:35:29 -Mapped "{[/common/log/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.LogController.remove(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.lostfound.common.controller.LogController.log()
+2019-03-13 15:35:29 -Mapped "{[/common/log/list],methods=[GET]}" onto com.lostfound.common.domain.PageDO<com.lostfound.common.domain.LogDO> com.lostfound.common.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.common.controller.LogController.batchRemove(java.lang.Long[])
+2019-03-13 15:35:29 -Mapped "{[/error]}" onto public com.lostfound.common.utils.R com.lostfound.common.exception.MainsiteErrorController.handleError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-13 15:35:29 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.lostfound.common.exception.MainsiteErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/add],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.add()
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.remove(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.remove(java.lang.Long[])
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/update]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.update(com.lostfound.oa.domain.NotifyDO)
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/read/{id}],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.read(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/list],methods=[GET]}" onto public com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.oa.controller.NotifyController.save(com.lostfound.oa.domain.NotifyDO)
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/message],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.message()
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/selfNotify],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.selefNotify()
+2019-03-13 15:35:29 -Mapped "{[/oa/notify/selfList],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.oa.controller.NotifyController.selfList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/oa/notify],methods=[GET]}" onto java.lang.String com.lostfound.oa.controller.NotifyController.oaNotify()
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/add/{pId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.add(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/remove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.remove(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/batchRemove],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.remove(java.lang.Long[])
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/update]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.update(com.lostfound.system.domain.DeptDO)
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/list],methods=[GET]}" onto public java.util.List<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.DeptController.list()
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/save],methods=[POST]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.DeptController.save(com.lostfound.system.domain.DeptDO)
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/tree],methods=[GET]}" onto public com.lostfound.common.domain.Tree<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.DeptController.tree()
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/edit/{deptId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.dept()
+2019-03-13 15:35:29 -Mapped "{[/system/sysDept/treeView],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.DeptController.treeView()
+2019-03-13 15:35:29 -Mapped "{[/index],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.index(org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/main],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.main()
+2019-03-13 15:35:29 -Mapped "{[/login || / || ],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.login()
+2019-03-13 15:35:29 -Mapped "{[/logout],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.LoginController.logout()
+2019-03-13 15:35:29 -Mapped "{[/login],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.LoginController.ajaxLogin(java.lang.String,java.lang.String)
+2019-03-13 15:35:29 -Mapped "{[/sys/menu/add/{pId}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.add(org.springframework.ui.Model,java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/sys/menu/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.remove(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/sys/menu/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.update(com.lostfound.system.domain.MenuDO)
+2019-03-13 15:35:29 -Mapped "{[/sys/menu/list]}" onto java.util.List<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/sys/menu/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.MenuController.save(com.lostfound.system.domain.MenuDO)
+2019-03-13 15:35:29 -Mapped "{[/sys/menu/tree/{roleId}],methods=[GET]}" onto com.lostfound.common.domain.Tree<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.tree(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/sys/menu/tree],methods=[GET]}" onto com.lostfound.common.domain.Tree<com.lostfound.system.domain.MenuDO> com.lostfound.system.controller.MenuController.tree()
+2019-03-13 15:35:29 -Mapped "{[/sys/menu/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/sys/menu],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.MenuController.menu(org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/sys/role/add],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.add()
+2019-03-13 15:35:29 -Mapped "{[/sys/role/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.update(com.lostfound.system.domain.RoleDO)
+2019-03-13 15:35:29 -Mapped "{[/sys/role/list],methods=[GET]}" onto java.util.List<com.lostfound.system.domain.RoleDO> com.lostfound.system.controller.RoleController.list()
+2019-03-13 15:35:29 -Mapped "{[/sys/role/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.save(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/sys/role/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.save(com.lostfound.system.domain.RoleDO)
+2019-03-13 15:35:29 -Mapped "{[/sys/role/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.RoleController.batchRemove(java.lang.Long[])
+2019-03-13 15:35:29 -Mapped "{[/sys/role],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.role()
+2019-03-13 15:35:29 -Mapped "{[/sys/role/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.RoleController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.lostfound.system.domain.UserOnline> com.lostfound.system.controller.SessionController.list()
+2019-03-13 15:35:29 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.lostfound.common.utils.R com.lostfound.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-03-13 15:35:29 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.lostfound.system.controller.SessionController.sessionList()
+2019-03-13 15:35:29 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.lostfound.system.controller.SessionController.online()
+2019-03-13 15:35:29 -Mapped "{[/sys/user/exit],methods=[POST]}" onto boolean com.lostfound.system.controller.UserController.exit(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/add],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.add(org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/remove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.remove(java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/update],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.update(com.lostfound.system.domain.UserDO)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/list],methods=[GET]}" onto com.lostfound.common.utils.PageUtils com.lostfound.system.controller.UserController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/save],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.save(com.lostfound.system.domain.UserDO)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/batchRemove],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.batchRemove(java.lang.Long[])
+2019-03-13 15:35:29 -Mapped "{[/sys/user/tree],methods=[GET]}" onto public com.lostfound.common.domain.Tree<com.lostfound.system.domain.DeptDO> com.lostfound.system.controller.UserController.tree()
+2019-03-13 15:35:29 -Mapped "{[/sys/user],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.user(org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/edit/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/treeView],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.treeView()
+2019-03-13 15:35:29 -Mapped "{[/sys/user/resetPwd],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.resetPwd(com.lostfound.system.vo.UserVO)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/resetPwd/{id}],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.resetPwd(java.lang.Long,org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/updatePeronal],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.updatePeronal(com.lostfound.system.domain.UserDO)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/adminResetPwd],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.adminResetPwd(com.lostfound.system.vo.UserVO)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/personal],methods=[GET]}" onto java.lang.String com.lostfound.system.controller.UserController.personal(org.springframework.ui.Model)
+2019-03-13 15:35:29 -Mapped "{[/sys/user/uploadImg],methods=[POST]}" onto com.lostfound.common.utils.R com.lostfound.system.controller.UserController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-03-13 15:35:29 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-03-13 15:35:29 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-03-13 15:35:29 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-03-13 15:35:29 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-03-13 15:35:30 -Initializing ExecutorService  'messageBrokerTaskScheduler'
+2019-03-13 15:35:30 -Mapped URL path [/endpointChat/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2019-03-13 15:35:30 -Initializing ExecutorService  'brokerChannelExecutor'
+2019-03-13 15:35:30 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-13 15:35:30 -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2783717b: startup date [Wed Mar 13 15:35:18 CST 2019]; root of context hierarchy
+2019-03-13 15:35:30 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-13 15:35:30 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-13 15:35:30 -Mapped URL path [/files/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-13 15:35:31 -Detected @ExceptionHandler methods in BDExceptionHandler
+2019-03-13 15:35:31 -[THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-13 15:35:32 -Registering beans for JMX exposure on startup
+2019-03-13 15:35:32 -Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-03-13 15:35:32 -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-03-13 15:35:32 -Starting beans in phase 2147483647
+2019-03-13 15:35:32 -Context refreshed
+2019-03-13 15:35:32 -Found 1 custom documentation plugin(s)
+2019-03-13 15:35:32 -Scanning for api listing references
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_1
+2019-03-13 15:35:33 -Generating unique operation named: addUsingGET_1
+2019-03-13 15:35:33 -Generating unique operation named: editUsingGET_1
+2019-03-13 15:35:33 -Generating unique operation named: listUsingGET_1
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_2
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_3
+2019-03-13 15:35:33 -Generating unique operation named: saveUsingPOST_1
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingGET_1
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingHEAD_1
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPOST_1
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPUT_1
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPATCH_1
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingDELETE_1
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingOPTIONS_1
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingTRACE_1
+2019-03-13 15:35:33 -Generating unique operation named: addUsingGET_2
+2019-03-13 15:35:33 -Generating unique operation named: editUsingGET_2
+2019-03-13 15:35:33 -Generating unique operation named: listUsingGET_2
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_4
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_5
+2019-03-13 15:35:33 -Generating unique operation named: saveUsingPOST_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingGET_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingHEAD_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPOST_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPUT_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPATCH_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingDELETE_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingOPTIONS_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingTRACE_2
+2019-03-13 15:35:33 -Generating unique operation named: editUsingGET_3
+2019-03-13 15:35:33 -Generating unique operation named: listUsingGET_3
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPOST_3
+2019-03-13 15:35:33 -Generating unique operation named: addUsingGET_3
+2019-03-13 15:35:33 -Generating unique operation named: editUsingGET_4
+2019-03-13 15:35:33 -Generating unique operation named: infoUsingGET_1
+2019-03-13 15:35:33 -Generating unique operation named: infoUsingHEAD_1
+2019-03-13 15:35:33 -Generating unique operation named: infoUsingPOST_1
+2019-03-13 15:35:33 -Generating unique operation named: infoUsingPUT_1
+2019-03-13 15:35:33 -Generating unique operation named: infoUsingPATCH_1
+2019-03-13 15:35:33 -Generating unique operation named: infoUsingDELETE_1
+2019-03-13 15:35:33 -Generating unique operation named: infoUsingOPTIONS_1
+2019-03-13 15:35:33 -Generating unique operation named: infoUsingTRACE_1
+2019-03-13 15:35:33 -Generating unique operation named: listUsingGET_4
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_6
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_7
+2019-03-13 15:35:33 -Generating unique operation named: saveUsingPOST_3
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPOST_4
+2019-03-13 15:35:33 -Generating unique operation named: listUsingGET_5
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_8
+2019-03-13 15:35:33 -Generating unique operation named: loginUsingGET_1
+2019-03-13 15:35:33 -Generating unique operation named: loginUsingGET_2
+2019-03-13 15:35:33 -Generating unique operation named: addUsingGET_4
+2019-03-13 15:35:33 -Generating unique operation named: editUsingGET_5
+2019-03-13 15:35:33 -Generating unique operation named: listUsingGET_6
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_9
+2019-03-13 15:35:33 -Generating unique operation named: saveUsingPOST_4
+2019-03-13 15:35:33 -Generating unique operation named: treeUsingGET_1
+2019-03-13 15:35:33 -Generating unique operation named: treeUsingGET_2
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPOST_5
+2019-03-13 15:35:33 -Generating unique operation named: addUsingGET_5
+2019-03-13 15:35:33 -Generating unique operation named: editUsingGET_6
+2019-03-13 15:35:33 -Generating unique operation named: listUsingGET_7
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_10
+2019-03-13 15:35:33 -Generating unique operation named: removeUsingPOST_11
+2019-03-13 15:35:33 -Generating unique operation named: saveUsingPOST_5
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingGET_3
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingHEAD_3
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPOST_6
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPUT_3
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPATCH_3
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingDELETE_3
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingOPTIONS_3
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingTRACE_3
+2019-03-13 15:35:33 -Generating unique operation named: addUsingGET_6
+2019-03-13 15:35:33 -Generating unique operation named: batchRemoveUsingPOST_1
+2019-03-13 15:35:33 -Generating unique operation named: editUsingGET_7
+2019-03-13 15:35:33 -Generating unique operation named: listUsingGET_8
+2019-03-13 15:35:33 -Generating unique operation named: saveUsingPOST_6
+2019-03-13 15:35:33 -Generating unique operation named: saveUsingPOST_7
+2019-03-13 15:35:33 -Generating unique operation named: updateUsingPOST_7
+2019-03-13 15:35:34 -Generating unique operation named: listUsingGET_9
+2019-03-13 15:35:34 -Generating unique operation named: listUsingHEAD_1
+2019-03-13 15:35:34 -Generating unique operation named: listUsingPOST_1
+2019-03-13 15:35:34 -Generating unique operation named: listUsingPUT_1
+2019-03-13 15:35:34 -Generating unique operation named: listUsingPATCH_1
+2019-03-13 15:35:34 -Generating unique operation named: listUsingDELETE_1
+2019-03-13 15:35:34 -Generating unique operation named: listUsingOPTIONS_1
+2019-03-13 15:35:34 -Generating unique operation named: listUsingTRACE_1
+2019-03-13 15:35:34 -Generating unique operation named: addUsingGET_7
+2019-03-13 15:35:34 -Generating unique operation named: batchRemoveUsingPOST_2
+2019-03-13 15:35:34 -Generating unique operation named: editUsingGET_8
+2019-03-13 15:35:34 -Generating unique operation named: listUsingGET_10
+2019-03-13 15:35:34 -Generating unique operation named: removeUsingPOST_12
+2019-03-13 15:35:34 -Generating unique operation named: saveUsingPOST_8
+2019-03-13 15:35:34 -Generating unique operation named: treeUsingGET_3
+2019-03-13 15:35:34 -Generating unique operation named: treeViewUsingGET_1
+2019-03-13 15:35:34 -Generating unique operation named: updateUsingPOST_8
+2019-03-13 15:35:34 -Starting Quartz Scheduler now
+2019-03-13 15:35:34 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2019-03-13 15:35:34 -Starting...
+2019-03-13 15:35:34 -BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-03-13 15:35:34 -Started.
+2019-03-13 15:35:34 -Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 15:35:34 -Using a shared selector for servlet write/read
+2019-03-13 15:35:34 -Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 15:35:34 -Started LostFoundApplication in 16.333 seconds (JVM running for 19.665)
+2019-03-13 15:35:34 -==>  Preparing: select `id`,`cron_expression`,`method_name`,`is_concurrent`,`description`,`update_by`,`bean_class`,`create_date`,`job_status`,`job_group`,`update_date`,`create_by`,`spring_bean`,`job_name` from sys_task order by id desc 
+2019-03-13 15:35:34 -==> Parameters: 
+2019-03-13 15:35:34 -<==      Total: 1
+2019-03-13 15:36:03 -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-13 15:36:03 -FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-13 15:36:03 -FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+2019-03-13 15:36:03 -Enabling session validation scheduler...
+2019-03-13 15:36:03 -请求地址 : http://localhost:8080/
+2019-03-13 15:36:03 -HTTP METHOD : GET
+2019-03-13 15:36:03 -CLASS_METHOD : com.lostfound.system.controller.LoginController.login
+2019-03-13 15:36:03 -参数 : []
+2019-03-13 15:36:03 -耗时 : 3
+2019-03-13 15:36:03 -返回值 : login
+2019-03-13 15:36:05 -请求地址 : http://localhost:8080/login
+2019-03-13 15:36:05 -HTTP METHOD : POST
+2019-03-13 15:36:05 -CLASS_METHOD : com.lostfound.system.controller.LoginController.ajaxLogin
+2019-03-13 15:36:05 -参数 : [admin, 111111]
+2019-03-13 15:36:05 -==>  Preparing: select `user_id`,`username`,`name`,`password`,`dept_id`,`email`,`mobile`,`status`,`user_id_create`,`gmt_create`,`gmt_modified`,`sex`,`birth`,`pic_id`,`live_address`,`hobby`,`province`,`city`,`district` from sys_user WHERE username = ? order by user_id desc 
+2019-03-13 15:36:05 -==> Parameters: admin(String)
+2019-03-13 15:36:05 -<==      Total: 1
+2019-03-13 15:36:05 -耗时 : 91
+2019-03-13 15:36:05 -返回值 : {msg=操作成功, code=0}
+2019-03-13 15:36:05 -请求地址 : http://localhost:8080/index
+2019-03-13 15:36:05 -HTTP METHOD : GET
+2019-03-13 15:36:05 -CLASS_METHOD : com.lostfound.system.controller.LoginController.index
+2019-03-13 15:36:05 -参数 : [{}]
+2019-03-13 15:36:05 -==>  Preparing: select distinct m.menu_id , parent_id, name, url, perms,`type`,icon,order_num,gmt_create, gmt_modified from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id =ur.role_id where ur.user_id = ? and m.type in(0,1) order by m.order_num 
+2019-03-13 15:36:05 -==> Parameters: 1(Long)
+2019-03-13 15:36:05 -<==      Total: 27
+2019-03-13 15:36:05 -==>  Preparing: select `id`,`type`,`url`,`create_date` from sys_file where id = ? 
+2019-03-13 15:36:05 -==> Parameters: 142(Long)
+2019-03-13 15:36:05 -<==      Total: 1
+2019-03-13 15:36:05 -耗时 : 136
+2019-03-13 15:36:05 -返回值 : index_v1
+2019-03-13 15:36:05 -请求地址 : http://localhost:8080/main
+2019-03-13 15:36:05 -HTTP METHOD : GET
+2019-03-13 15:36:05 -CLASS_METHOD : com.lostfound.system.controller.LoginController.main
+2019-03-13 15:36:05 -参数 : []
+2019-03-13 15:36:05 -耗时 : 0
+2019-03-13 15:36:05 -返回值 : main
+2019-03-13 15:36:06 -请求地址 : http://localhost:8080/oa/notify/message
+2019-03-13 15:36:06 -HTTP METHOD : GET
+2019-03-13 15:36:06 -CLASS_METHOD : com.lostfound.oa.controller.NotifyController.message
+2019-03-13 15:36:06 -参数 : []
+2019-03-13 15:36:06 -==>  Preparing: select DISTINCT n.id ,`type`,`title`,`content`,`files`,r.is_read,`status`,`create_by`,`create_date`,`update_by`,`update_date`,`remarks`,`del_flag` from oa_notify_record r right JOIN oa_notify n on r.notify_id = n.id WHERE r.is_read = ? and r.user_id = ? order by is_read ASC, update_date DESC limit ?, ? 
+2019-03-13 15:36:06 -==> Parameters: 0(String), 1(Long), 0(Integer), 3(Integer)
+2019-03-13 15:36:06 -<==      Total: 0
+2019-03-13 15:36:06 -==>  Preparing: select count(*) from oa_notify_record r right JOIN oa_notify n on r.notify_id = n.id where r.user_id =? and r.is_read = ? 
+2019-03-13 15:36:06 -==> Parameters: 1(Long), 0(String)
+2019-03-13 15:36:06 -<==      Total: 1
+2019-03-13 15:36:06 -耗时 : 49
+2019-03-13 15:36:06 -返回值 : com.lostfound.common.utils.PageUtils@47453b37
+2019-03-13 15:36:06 -请求地址 : http://localhost:8080/main
+2019-03-13 15:36:06 -HTTP METHOD : GET
+2019-03-13 15:36:06 -CLASS_METHOD : com.lostfound.system.controller.LoginController.main
+2019-03-13 15:36:06 -参数 : []
+2019-03-13 15:36:06 -耗时 : 0
+2019-03-13 15:36:06 -返回值 : main
+2019-03-13 15:36:27 -==>  Preparing: select distinct m.perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? 
+2019-03-13 15:36:27 -==> Parameters: 1(Long)
+2019-03-13 15:36:27 -<==      Total: 40
+2019-03-13 15:36:27 -请求地址 : http://localhost:8080/common/dict
+2019-03-13 15:36:27 -HTTP METHOD : GET
+2019-03-13 15:36:27 -CLASS_METHOD : com.lostfound.common.controller.DictController.dict
+2019-03-13 15:36:27 -参数 : []
+2019-03-13 15:36:27 -耗时 : 0
+2019-03-13 15:36:27 -返回值 : common/dict/dict
+2019-03-13 15:36:27 -请求地址 : http://localhost:8080/common/dict/type
+2019-03-13 15:36:27 -HTTP METHOD : GET
+2019-03-13 15:36:27 -CLASS_METHOD : com.lostfound.common.controller.DictController.listType
+2019-03-13 15:36:27 -参数 : []
+2019-03-13 15:36:27 -==>  Preparing: select distinct `type` , description from sys_dict 
+2019-03-13 15:36:27 -==> Parameters: 
+2019-03-13 15:36:27 -<==      Total: 31
+2019-03-13 15:36:27 -耗时 : 25
+2019-03-13 15:36:27 -返回值 : [DictDO{id=null, name='null', value='null', type='del_flag', description='删除标记', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='show_hide', description='显示/隐藏', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='yes_no', description='是/否', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='color', description='颜色值', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='theme', description='主题方案', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='sys_area_type', description='区域类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='sys_office_type', description='机构类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='sys_office_common', description='快捷通用部门', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='sys_office_grade', description='机构等级', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='sys_data_scope', description='数据范围', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='sys_user_type', description='用户类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='cms_theme', description='站点主题', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='cms_module', description='栏目模型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='cms_show_modes', description='展现方式', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='cms_del_flag', description='内容状态', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='cms_posid', description='推荐位', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='cms_guestbook', description='留言板分类', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='oa_leave_type', description='请假类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='sys_log_type', description='日志类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='act_type', description='流程类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='act_category', description='流程分类', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='gen_category', description='代码生成分类', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='gen_query_type', description='查询方式', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='gen_show_type', description='字段生成方案', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='gen_java_type', description='Java类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='sex', description='性别', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='oa_notify_type', description='通知通告类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='oa_notify_status', description='通知通告状态', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='oa_notify_read', description='通知通告状态', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='blog_type', description='博客类型', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}, DictDO{id=null, name='null', value='null', type='hobby', description='爱好', sort=null, parentId=null, createBy=null, createDate=null, updateBy=null, updateDate=null, remarks='null', delFlag='null'}]
+2019-03-13 15:36:27 -请求地址 : http://localhost:8080/common/dict/list
+2019-03-13 15:36:27 -HTTP METHOD : GET
+2019-03-13 15:36:27 -CLASS_METHOD : com.lostfound.common.controller.DictController.list
+2019-03-13 15:36:27 -参数 : [{limit=10, offset=0}]
+2019-03-13 15:36:27 -==>  Preparing: select `id`,`name`,`value`,`type`,`description`,`sort`,`parent_id`,`create_by`,`create_date`,`update_by`,`update_date`,`remarks`,`del_flag` from sys_dict order by id desc limit ?, ? 
+2019-03-13 15:36:27 -==> Parameters: 0(Integer), 10(Integer)
+2019-03-13 15:36:27 -<==      Total: 10
+2019-03-13 15:36:27 -==>  Preparing: select count(*) from sys_dict 
+2019-03-13 15:36:27 -==> Parameters: 
+2019-03-13 15:36:27 -<==      Total: 1
+2019-03-13 15:36:27 -耗时 : 13
+2019-03-13 15:36:27 -返回值 : com.lostfound.common.utils.PageUtils@3422398a
+2019-03-13 15:36:30 -WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 8, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannelpool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 2, completed tasks = 5]
+2019-03-13 15:38:38 -请求地址 : http://localhost:8080/common/generator
+2019-03-13 15:38:38 -HTTP METHOD : GET
+2019-03-13 15:38:38 -CLASS_METHOD : com.lostfound.common.controller.GeneratorController.generator
+2019-03-13 15:38:38 -参数 : []
+2019-03-13 15:38:38 -耗时 : 0
+2019-03-13 15:38:38 -返回值 : common/generator/list
+2019-03-13 15:38:38 -请求地址 : http://localhost:8080/common/generator/list
+2019-03-13 15:38:38 -HTTP METHOD : GET
+2019-03-13 15:38:38 -CLASS_METHOD : com.lostfound.common.controller.GeneratorController.list
+2019-03-13 15:38:38 -参数 : []
+2019-03-13 15:38:38 -==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) 
+2019-03-13 15:38:38 -==> Parameters: 
+2019-03-13 15:38:38 -<==      Total: 18
+2019-03-13 15:38:38 -耗时 : 16
+2019-03-13 15:38:38 -返回值 : [{createTime=2019-02-28 14:12:44.0, ENGINE=InnoDB, tableComment=文章内容, tableName=blog_content}, {createTime=2019-03-11 16:47:44.0, ENGINE=InnoDB, tableComment=, tableName=expressthanks}, {createTime=2019-03-13 15:27:08.0, ENGINE=InnoDB, tableComment=, tableName=lostthings}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=通知通告, tableName=oa_notify}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=通知通告发送记录, tableName=oa_notify_record}, {createTime=2019-03-11 16:55:52.0, ENGINE=InnoDB, tableComment=, tableName=pickthings}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=审批流程测试表, tableName=salary}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=部门管理, tableName=sys_dept}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=字典表, tableName=sys_dict}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=文件上传, tableName=sys_file}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=系统日志, tableName=sys_log}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=菜单管理, tableName=sys_menu}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=角色, tableName=sys_role}, {createTime=2019-02-28 14:12:45.0, ENGINE=InnoDB, tableComment=角色与菜单对应关系, tableName=sys_role_menu}, {createTime=2019-02-28 14:12:45.0, ENGINE=MyISAM, tableComment=, tableName=sys_task}, {createTime=2019-02-28 14:12:46.0, ENGINE=InnoDB, tableComment=, tableName=sys_user}, {createTime=2019-02-28 14:12:46.0, ENGINE=InnoDB, tableComment=, tableName=sys_user_plus}, {createTime=2019-02-28 14:12:46.0, ENGINE=InnoDB, tableComment=用户与角色对应关系, tableName=sys_user_role}]
+2019-03-13 15:39:02 -请求地址 : http://localhost:8080/common/generator/code/lostthings
+2019-03-13 15:39:02 -HTTP METHOD : GET
+2019-03-13 15:39:02 -CLASS_METHOD : com.lostfound.common.controller.GeneratorController.code
+2019-03-13 15:39:02 -参数 : [org.apache.shiro.web.servlet.ShiroHttpServletRequest@76ed3052, org.apache.shiro.web.servlet.ShiroHttpServletResponse@2fc1e504, lostthings]
+2019-03-13 15:39:02 -==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2019-03-13 15:39:02 -==> Parameters: lostthings(String)
+2019-03-13 15:39:02 -<==      Total: 1
+2019-03-13 15:39:02 -==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2019-03-13 15:39:02 -==> Parameters: lostthings(String)
+2019-03-13 15:39:02 -<==      Total: 12
+2019-03-13 15:39:02 -耗时 : 367
+2019-03-13 15:39:02 -返回值 : null
+2019-03-13 15:39:11 -请求地址 : http://localhost:8080/common/generator/code/pickthings
+2019-03-13 15:39:11 -HTTP METHOD : GET
+2019-03-13 15:39:11 -CLASS_METHOD : com.lostfound.common.controller.GeneratorController.code
+2019-03-13 15:39:11 -参数 : [org.apache.shiro.web.servlet.ShiroHttpServletRequest@6e9b1fdb, org.apache.shiro.web.servlet.ShiroHttpServletResponse@53976071, pickthings]
+2019-03-13 15:39:11 -==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2019-03-13 15:39:11 -==> Parameters: pickthings(String)
+2019-03-13 15:39:11 -<==      Total: 1
+2019-03-13 15:39:11 -==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2019-03-13 15:39:11 -==> Parameters: pickthings(String)
+2019-03-13 15:39:11 -<==      Total: 14
+2019-03-13 15:39:11 -耗时 : 57
+2019-03-13 15:39:11 -返回值 : null
+2019-03-13 16:06:30 -WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 2, completed tasks = 438]
+2019-03-13 16:36:03 -Validating all active sessions...
+2019-03-13 16:36:03 -Finished session validation.  [2] sessions were stopped.
+2019-03-13 16:36:30 -WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 2, completed tasks = 871]
+2019-03-13 17:06:30 -WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 2, completed tasks = 1304]
+2019-03-13 17:36:03 -Validating all active sessions...
+2019-03-13 17:36:03 -Finished session validation.  No sessions were stopped.
+2019-03-13 17:36:30 -WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 1, completed tasks = 1715]
+2019-03-13 17:49:50 -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2783717b: startup date [Wed Mar 13 15:35:18 CST 2019]; root of context hierarchy
+2019-03-13 17:49:50 -Stopping beans in phase 2147483647
+2019-03-13 17:49:50 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2019-03-13 17:49:50 -Stopping...
+2019-03-13 17:49:50 -BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-03-13 17:49:50 -Stopped.
+2019-03-13 17:49:51 -Unregistering JMX-exposed beans on shutdown
+2019-03-13 17:49:51 -Unregistering JMX-exposed beans
+2019-03-13 17:49:51 -Shutting down ExecutorService 'brokerChannelExecutor'
+2019-03-13 17:49:51 -Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-03-13 17:49:51 -Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-03-13 17:49:51 -Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-03-13 17:49:51 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2019-03-13 17:49:51 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2019-03-13 17:49:51 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2019-03-13 17:49:51 -Shutting down Quartz Scheduler
+2019-03-13 17:49:51 -{dataSource-1} closed
+2019-03-13 17:49:51 -Disabled session validation scheduler.

@@ -1,0 +1,89 @@
+package ${package}.${pathName}.controller;
+import com.atom.common.configuration.GlobalConstants;
+import com.atom.common.dto.ModelListResult;
+import com.atom.common.dto.Page;
+import com.little.utils.convert.StringUtils;
+import com.lianxin.mngserver.controller.base.BaseController;
+import com.lianxin.mngserver.domain.${pathName}.${className}MngReq;
+import com.lianxin.mngserver.exception.system.BusinessException;
+import com.lianxin.mngserver.mapper.${pathName}.${className}Mapper;
+import com.lianxin.mngserver.share.annotation.Log;
+import com.lianxin.user.prefer.domain.${className};
+import com.lianxin.user.prefer.dto.${className}ComplexReq;
+import com.little.utils.reflect.Reflect;
+import org.apache.commons.lang.StringUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Controller
+@RequestMapping("${pathName}/${classname}")
+public class ${className}Controller extends BaseController {
+
+    @Autowired
+    private ${className}Mapper ${classname}Mapper;
+
+    @RequestMapping("")
+    @RequiresPermissions("${pathName}:${classname}:list")
+    public String main(Model model) {
+        return "${pathName}/${classname}/main";
+    }
+
+    @ResponseBody
+    @GetMapping("/list")
+    @RequiresPermissions("${pathName}:${classname}:list")
+    public Page<${className}> list(String correlationID, ${className}MngReq ${classname}MngReq) {
+        info(correlationID, "进入列表查询界面,请求参数为: " + ${classname}Req);
+        ${className}ComplexReq ${classname}ComplexReq= (${className}ComplexReq) Reflect.on(${classname}MngReq).copy(new ${className}ComplexReq());
+        ModelListResult<${className}> model = ${classname}Mapper.findByComplexCondition(correlationID, ${classname}ComplexReq, ${classname}MngReq.getPage(), ${classname}MngReq.getPageSize());
+        return model.toPage();
+    }
+
+
+
+    @Log("进入编辑界面")
+    @GetMapping("/edit")
+    @RequiresPermissions("${pathName}:${classname}:edit")
+    public String edit(String correlationID, String ${pk.attrname}, Model model) {
+        info(correlationID, "进入编辑界面");
+        if(StringUtils.isNotEmpty(id)) {
+            ${className} ${classname} =${classname}Mapper.get(correlationID, id);
+            model.addAttribute("model",${classname});
+        }
+        return "${pathName}/${classname}/edit";
+    }
+
+    @Log("调用更新接口")
+    @PostMapping("/save")
+    @RequiresPermissions("${pathName}:${classname}:edit")
+    @ResponseBody
+    public void editAction(String correlationID, @RequestBody ${className} ${classname}) {
+        info(correlationID, "调用保存接口，参数为："+${classname});
+        if(StringUtils.isNotEmpty(${className}.get${pk.attrName}())) {
+            ${classname}Mapper.update(correlationID,${classname});
+        }else{
+            ${classname}Mapper.update(correlationID,${classname});
+        }
+    }
+
+    @PostMapping("/remove")
+    @ResponseBody
+    @Log("进入删除接口")
+    @RequiresPermissions("${pathName}:${classname}:remove")
+    public void remove(String correlationID, String ${pk.attrname}) {
+        info(correlationID, "进入删除接口,参数为: " + ${pk.attrname});
+        ${className} ${classname} = ${classname}Mapper.get(correlationID, ${pk.attrName});
+        ${classname}.set${pk.attrName}(${pk.attrname});
+        ${classname}.setStatus(GlobalConstants.STATUS.DISABLE);
+        ${classname}Mapper.update(correlationID, ${classname});
+    }
+}
